@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type=text/css href="{% static 'hotel/css/normalize.css' %}">
+    <link rel="stylesheet" type=text/css href="{% static 'hotel/css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet"> 
+    
+    {% if title %}
+        <title>Merveille Hotel - {{ title }}</title>
+    {% else %}
+        <title>Merveille Hotel</title>
+    {% endif %}
+
+</head>
+<body>
+    <nav>
+        <div class='container'>
+            <h4><a href="#">La Merveille</a></h4>
+        </div>
+
+        <ul class='nav__list'>
+            
+            <li class='nav__item_1'>
+                <a href="#">Home</a>
+            </li>
+            
+            <li class='nav__item_2'>
+                <a href="#">About</a>
+            </li>
+            
+            <li class='nav__item_3'>
+                <a href="#">Contact</a>
+            </li>
+            
+        </ul>
+        <div class='burger'>
+            <div class='burger__div1'></div>
+            <div class='burger__div1'></div>
+            <div class='burger__div1'></div>
+        </div>
+
+    </nav>
+    <img class='div__img' src="{% static 'hotel/images/image1.jpeg' %}" alt="">
+        
+
+    <script src="{% static 'hotel/js/jsmotion.js' %}"></script>
+</body>
+</html>
