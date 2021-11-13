@@ -7,8 +7,10 @@
 
 1.  Global Styles
 2.  navBar Classes
-3.  Image Classes
-4.  Active Classes
+3.  Button Classes 
+4.  Image  Classes 
+5.  Active Classes
+6.  Media Screen
 
 
 
@@ -37,13 +39,16 @@
 
 
 nav {
+    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    background-color: #AA8A73;
+    width: 90%;
+    left: 5%;
+    min-height: 17vh;
+    font-family: 'Montserrat', serif;
+    font-size: 15px;
 }
 
 
@@ -56,30 +61,42 @@ nav {
 ======================
 */
 
+.nav-bar-outline{
+    position:absolute;
+    position: fixed;
+    display: flex;
+    width: 90vw;
+    height: 1px;
+    top: 13vh;
+    left: 4vw;
+    background-color: #ffff;
+    
+}
 
-.container__nav a{
-    color: #F0E9D2;
-    font-size: 28px;
-    text-decoration: none;
+.logo{
+    position:absolute;
+    width: 10vw;
+    left: 1vw;
 
 }
 
-.nav__list {
-    list-style: none;
-}
 
 .nav__list {
     display: flex;
+    position: absolute;
     justify-content: space-around;
-    width: 50%;
+    width: 30%;
+    right: 5vw;
+    list-style: none;
+
     
 }
 
 .nav__list a{
 
-    color: #F0E9D2;
+    color: #ffff;
     text-decoration: none;
-    font-weight: bold
+    font-weight: bold;
 
 }
 
@@ -93,7 +110,7 @@ nav {
     width: 20px;
     margin: 4px;
     border-radius: 3px;
-    background-color: #F0E9D2;
+    background-color: #ffff;
     transition-duration: 500ms;
 }
 
@@ -101,7 +118,40 @@ nav {
 /* 
 ======================
 
-     Image Classes
+  3. Button Classes
+
+======================
+*/
+
+.nav__list div{
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: transparent;
+    transition-duration: 500ms;
+    cursor: pointer;
+
+
+}
+
+.nav__list a{
+    position: relative;
+    top: 0.8vh;
+    font-size: 2vh;
+
+}
+
+.nav__list div:hover{
+    border: 1.5px solid #ffff;
+
+
+}
+
+/* 
+======================
+
+   4. Image Classes
 
 ======================
 */
@@ -177,6 +227,19 @@ nav {
         position: fixed;
     }
 
+    nav {
+        position: absolute;
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        left: 0;
+        min-height: 17vh;
+        font-family: 'Montserrat', serif;
+        font-size: 15px;
+    }
+    
 
 /* 
 ======================
@@ -189,33 +252,43 @@ nav {
 
     .nav__list{
         position: absolute;
-        right: 0px;
+        right: 0;
         height: 92vh;
-        top: 8vh;
-        background-color: #AA8A73;
+        top: 0;
+        background-color: rgba(0,0,0,0.6);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 100%;
         transition-duration: 500ms;
         transform: translateX(100%);
     }
 
-    .container__nav a{
+
+
+    .logo{
         position: absolute;
-        left: 5vw;
-        top: 1vh;
-        color: #F0E9D2;
-        font-size: 28px;
-        text-decoration: none;
+        top: 5vh;
+        width: 50vw;
 
     
     }
 
-    .nav__list li{
+
+    .nav__list div{
         opacity: 0;
     }
     
+    .btn-list-1 {
+    width: 80px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: transparent;
+    transition-duration: 500ms;
+    cursor: pointer;
+    }
+
 
     .burger{
         display: block;
@@ -234,7 +307,7 @@ nav {
 /* 
 ======================
 
-2. Transition Section
+5. Active Classes
 
 ======================
 */

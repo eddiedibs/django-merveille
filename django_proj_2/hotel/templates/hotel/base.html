@@ -9,7 +9,7 @@
     <link rel="stylesheet" type=text/css href="{% static 'hotel/css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
     
     {% if title %}
         <title>Merveille Hotel - {{ title }}</title>
@@ -19,24 +19,23 @@
 
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
-        <div class='container__nav'>
-            <h4><a href="#">La Merveille</a></h4>
-        </div>
+        <img class="logo" src="{% static 'hotel/images/Logos/Logotipo_Blanco.svg' %}" alt="">
 
         <ul class='nav__list'>
             
-            <li class='nav__item_1'>
-                <a href="#">Home</a>
-            </li>
+            <div class='btn-list-1'>
+                <a href="#">Book now</a>
+            </div>
+
+            <div class='btn-list-2'>
+                <a href="#">Events</a>
+            </div>
             
-            <li class='nav__item_2'>
-                <a href="#">About</a>
-            </li>
-            
-            <li class='nav__item_3'>
-                <a href="#">Contact</a>
-            </li>
+            <div class='btn-list-3'>
+                <a href="#">Offers</a>
+            </div>
             
         </ul>
         <div class='burger'>
@@ -46,9 +45,10 @@
         </div>
 
     </nav>
-    <div class=''></div>
-    <img class='div__img' src="{% static 'hotel/images/image1.jpeg' %}" alt="">
-        
+    <div class="nav-bar-outline"></div>
+    <div>
+        <img class='div__img' src="{% static 'hotel/images/portada1.jpg' %}" alt="">
+    </div> 
 
     <script src="{% static 'hotel/js/jsmotion.js' %}"></script>
 </body>
