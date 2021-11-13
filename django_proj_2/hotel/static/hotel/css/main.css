@@ -46,6 +46,10 @@ nav {
 
 }
 
+.burger{
+    display: none;
+    cursor: pointer;
+}
 
 .burger div {
     height: 3px;
@@ -53,11 +57,10 @@ nav {
     margin: 4px;
     border-radius: 3px;
     background-color: #F0E9D2;
+    transition-duration: 500ms;
 }
 
-.burger{
-    display: none;
-}
+
 
 
 
@@ -72,6 +75,7 @@ nav {
 @media screen and (max-width:768px){
     body{
         overflow: hidden;
+        position: fixed;
     }
     .nav__list{
         position: absolute;
@@ -90,7 +94,7 @@ nav {
     .container a{
         position: absolute;
         left: 5vw;
-        top: 0.5vh;
+        top: 2vh;
         color: #F0E9D2;
         font-size: 28px;
         text-decoration: none;
@@ -107,9 +111,13 @@ nav {
         display: block;
         position: absolute;
         right: 10vw;
-        cursor: pointer;
+        transition: all 0.3s ease;
     }
 
+    
+    .iframe1 {
+        width: 100%
+    }
     
 
 
@@ -136,7 +144,25 @@ nav {
     }
 }
 
+.toggle .burger__div1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
 
+}
+
+.toggle .burger__div2 {
+    opacity: 0;
+}
+
+.toggle .burger__div3 {
+ 
+    transform: rotate(45deg) translate(-4px, -6px);
+
+}
+
+
+.iframe1 {
+    width: 100%
+}
 
 
 
