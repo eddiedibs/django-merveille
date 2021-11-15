@@ -28,13 +28,6 @@ const navMotion = () => {
 
 };
 
-navMotion();
-
-
-
-
-
-
 
 
 
@@ -62,10 +55,9 @@ function navChangeColor(){
 
     })
 
- 
-
     
 }
+
 
 
 
