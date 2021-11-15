@@ -26,3 +26,36 @@ const navMotion = () => {
 };
 
 navMotion();
+
+
+
+
+
+
+
+
+
+
+
+
+const navMovement = () => {
+
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

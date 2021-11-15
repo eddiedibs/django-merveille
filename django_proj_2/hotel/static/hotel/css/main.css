@@ -10,7 +10,7 @@
 3.  Button Classes 
 4.  Image  Classes 
 5.  Active Classes
-6.  Media Screen
+6.  Media  Screen
 
 
 
@@ -145,8 +145,14 @@ nav {
 .nav__list div:hover{
     border: 1.5px solid #ffff;
 
-
 }
+
+
+.btn-list-1:hover{
+    background-color: #002940;
+}
+
+
 
 /* 
 ======================
@@ -169,7 +175,7 @@ nav {
 /* 
 ======================
 
-     Media Screen
+   5. Media Screen
 
 ======================
 */
@@ -300,7 +306,7 @@ nav {
 }
  
 /*  
-============================================================
+==========================================================================================
 */
 
 
