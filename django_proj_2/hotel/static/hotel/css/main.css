@@ -38,15 +38,18 @@
 }
 
 
-nav {
-    position: absolute;
+.nav {
+    position: relative;
     position: fixed;
     display: flex;
     justify-content: space-around;
+    background-color: transparent;
+    border-bottom: 0.2vh solid white;
+    transition-duration: 500ms;
     align-items: center;
     width: 90%;
     left: 5%;
-    min-height: 17vh;
+    min-height: 14vh;
     font-family: 'Montserrat', serif;
     font-size: 15px;
 }
@@ -61,18 +64,8 @@ nav {
 ======================
 */
 
-.nav-bar-outline{
-    position:absolute;
-    position: fixed;
-    display: flex;
-    width: 90vw;
-    height: 1px;
-    top: 13vh;
-    left: 4vw;
-    background-color: #ffff;
-    
-}
 
+ 
 .logo{
     position:absolute;
     width: 10vw;
@@ -101,8 +94,11 @@ nav {
 }
 
 .burger {
+    position: absolute;
+    left: 85vw;
     display: none;
     cursor: pointer;
+    transition-duration: 500ms;
 }
 
 .burger div {
@@ -124,9 +120,9 @@ nav {
 */
 
 .nav__list div{
-    width: 80px;
-    height: 30px;
-    border-radius: 30px;
+    width: 7vw;
+    height: 5vh;
+    border-radius: 5vw;
     text-align: center;
     background-color: transparent;
     transition-duration: 500ms;
@@ -170,14 +166,72 @@ nav {
 }
 
 
-
-
 /* 
 ======================
 
-   5. Media Screen
+5. Active Classes
 
 ======================
+*/
+
+
+.nav-background-active{
+    background-color: #2B2B2B;
+    border-bottom: 0.2vh solid;
+    width: 100%;
+    left: 0;
+}
+
+
+.transparentNavbar-active{
+    background-color: transparent;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+@keyframes navFadeLists{
+    from{
+        opacity: 0;
+        transform: translateX(50%);
+
+    }
+
+
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+}
+
+.toggle .burger__div1 {
+    transform: rotate(-45deg) translate(-4px, 6px);
+
+}
+
+.toggle .burger__div2 {
+    opacity: 0;
+}
+
+.toggle .burger__div3 {
+ 
+    transform: rotate(45deg) translate(-4px, -6px);
+
+}
+
+
+
+
+/* 
+================================================================================================
+
+                                       6. Media Screen
+
+=================================================================================================
 */
 
 
@@ -186,16 +240,23 @@ nav {
     .nav__list{
         width:60%;
     }
+
+    .nav__list a{
+        position: relative;
+        top: 0;
+        font-size: 2vh;
+
+    }
+
 }
 
-
 /* 
-============================================================
+================================================================================================
 
-                        Media screen:
-                            Mobile
+                                        Media screen:
+                                            Mobile
 
-============================================================
+=================================================================================================
 */
 
 
@@ -233,7 +294,7 @@ nav {
         position: fixed;
     }
 
-    nav {
+    .nav {
         position: absolute;
         position: fixed;
         display: flex;
@@ -305,56 +366,13 @@ nav {
 
 }
  
-/*  
-==========================================================================================
-*/
-
-
 /* 
-======================
+================================================================================================
 
-5. Active Classes
-
-======================
+                                     END OF MOBILE SCREEN
+                                            
+=================================================================================================
 */
-
-
-
-.nav-active {
-    transform: translateX(0%);
-}
-
-
-@keyframes navFadeLists{
-    from{
-        opacity: 0;
-        transform: translateX(50%);
-
-    }
-
-
-
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-
-    }
-}
-
-.toggle .burger__div1 {
-    transform: rotate(-45deg) translate(-4px, 6px);
-
-}
-
-.toggle .burger__div2 {
-    opacity: 0;
-}
-
-.toggle .burger__div3 {
- 
-    transform: rotate(45deg) translate(-4px, -6px);
-
-}
 
 
 

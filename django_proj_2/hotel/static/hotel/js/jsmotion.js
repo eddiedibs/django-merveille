@@ -1,3 +1,6 @@
+
+//Function that shows a slidable menu for mobile devices
+
 const navMotion = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav__list');
@@ -36,15 +39,51 @@ navMotion();
 
 
 
+//Function that turns navBar visible when scrolled
+
+function navChangeColor(){
+    const navBar = document.querySelector('.nav');
+    const img = document.querySelector('.div__img');
+
+    window.addEventListener('scroll', () => {
+        let contentPosition = img.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+        
+        if (contentPosition < -41){
+            navBar.classList.add('nav-background-active')
+
+        }
+        else {
+            navBar.classList.remove('nav-background-active')
 
 
-const navMovement = () => {
+        }
+
+
+    })
+
+ 
+
+    
+}
+
+
+
+//function that activates all of them in one main function
+
+function mainApp(){
+
+navMotion();
+navChangeColor();
+
+};
+
+
+mainApp();
+
 
     
 
-
-
-}
 
 
 
