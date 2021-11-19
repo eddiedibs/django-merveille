@@ -4,7 +4,7 @@
 const navMotion = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav__list');
-    const lists = document.querySelectorAll('.nav__list div');
+    const lists = document.querySelectorAll('.nav__list a');
 
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');

@@ -68,8 +68,10 @@
  
 .logo{
     position:absolute;
+    top: 5vh;
     width: 10vw;
     left: 3vw;
+    height: 6vh;
 
 }
 
@@ -119,7 +121,7 @@
 ======================
 */
 
-.nav__list div{
+.nav__list a{
     width: 7vw;
     height: 5vh;
     border-radius: 5vw;
@@ -135,10 +137,10 @@
     position: relative;
     top: 0.8vh;
     font-size: 2vh;
-
+    line-height: 5vh;
 }
 
-.nav__list div:hover{
+.nav__list a:hover{
     border: 1.5px solid #ffff;
 
 }
@@ -277,8 +279,9 @@
 
     .logo{
         position: absolute;
-        top: 5vh;
+        top: 6vh;
         width: 50vw;
+        left: -1vw;
 
     
     }
@@ -306,11 +309,13 @@
 */
 
 .nav__list a{
+    position: relative;
     font-size: 3vh;
+    padding: 12vh;    
 
 }
 
-.nav__list div{
+.nav__list a{
     opacity: 0;
     text-align: center;
 }
@@ -321,12 +326,11 @@
     background-color: #002940;
 }
 
-.nav__list div {
+.nav__list a {
     width: 100%;
     height: 100%;
     border-radius: 0;
     border: none;
-    text-align: center;
     background-color: transparent;
 }
 
