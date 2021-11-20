@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+
     {% if title %}
         <title>Merveille Hotel - {{ title }}</title>
     {% else %}
@@ -40,11 +43,25 @@
 
         </nav>
     </div>
+   
+   
+    <div class='image-container'>
+        <h1 class='img__h1'>Full enjoyment and unparalleled comfort All in the same place.</h1>
+        <p class='img__p'>Looking for a comfortable accommodation? What gives you
+            a happy and fun stay? Are you looking for a unique experience? All that and
+            more in just one place: 
+            Our unparalleled Hotel.
+        </p>
+        <img class='div__img' src="{% static 'hotel/images/portada1_2.jpg' %}" alt="">
+        <div class='arrow-btn-container'>
+            <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
+            <img class='left-arrow' src="{% static 'hotel/icons/left.svg' %}" alt="">
+            <img class= 'pause-btn' src="{% static 'hotel/icons/pause.svg' %}" alt="">
 
-    <div>    
-        <img class='div__img' src="{% static 'hotel/images/portada1.jpg' %}" alt="">
-
-    </div> 
+        </div>
+        
+            
+    </div>
 
 
     <div>

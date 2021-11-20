@@ -38,10 +38,11 @@
 }
 
 
+
 .nav {
-    position: relative;
     position: fixed;
     display: flex;
+    z-index: 500;
     justify-content: space-around;
     background-color: transparent;
     border-bottom: 0.2vh solid white;
@@ -152,6 +153,38 @@
 
 
 
+.arrow-btn-container{
+    cursor:pointer;
+    
+}
+
+
+.left-arrow{
+    position: absolute;
+    left: 87vw;
+    top: 48vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+.right-arrow{
+    position: absolute;
+    left: 90vw;
+    top: 48vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+.pause-btn{
+    position: absolute;
+    left: 88.5vw;
+    top: 48vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+
+
 /* 
 ======================
 
@@ -167,7 +200,23 @@
     height: 50%;
 }
 
+.img__h1{
+    position: absolute;
+    padding: 38vh 34vw;
+    font-size: 2.6vmax;
+    font-family: 'Montserrat', serif;
+    color: white;
+}
 
+.img__p{
+    position: absolute;
+    padding: 65vh 30vw;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Montserrat', serif;
+    color: white;
+    text-align: center;
+}
 
 
 /* 
@@ -193,6 +242,8 @@
     }
 
 }
+
+
 
 /* 
 ================================================================================================
@@ -231,7 +282,6 @@
 
 ======================
 */
-    
     
     body{
         overflow: hidden;
