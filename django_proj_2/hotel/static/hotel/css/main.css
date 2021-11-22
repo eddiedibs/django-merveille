@@ -9,8 +9,9 @@
 2.  navBar Classes
 3.  Button Classes 
 4.  Image  Classes 
-5.  Active Classes
-6.  Media  Screen
+5.  Typography Classes
+6.  Active Classes
+7.  Media  Screen
 
 
 
@@ -35,6 +36,10 @@
     padding: 0;
     box-sizing: border-box;
 
+}
+
+body{
+    background-color: rgb(46, 46, 46);
 }
 
 
@@ -162,7 +167,7 @@
 .left-arrow{
     position: absolute;
     left: 87vw;
-    top: 48vmax;
+    top: 40vmax;
     width: 3vw;
     height: 5vh;
 }
@@ -170,7 +175,7 @@
 .right-arrow{
     position: absolute;
     left: 90vw;
-    top: 48vmax;
+    top: 40vmax;
     width: 3vw;
     height: 5vh;
 }
@@ -178,7 +183,7 @@
 .pause-btn{
     position: absolute;
     left: 88.5vw;
-    top: 48vmax;
+    top: 40vmax;
     width: 3vw;
     height: 5vh;
 }
@@ -194,13 +199,35 @@
 */
 
 
-
-.div__img {
-    width: 100%;
-    height: 50%;
+.slider{
+    width:100%;
+    margin: auto;
+    overflow-x: hidden;
 }
 
+.slides{
+    display: flex;
+    transition-duration: 700ms;
+}
+
+
+
+
+
+
+/* 
+===========================
+
+   5. Typography Classes
+
+===========================
+*/
+
+
+
+
 .img__h1{
+    bottom: 8vh;
     position: absolute;
     padding: 38vh 34vw;
     font-size: 2.6vmax;
@@ -210,14 +237,13 @@
 
 .img__p{
     position: absolute;
-    padding: 65vh 30vw;
+    padding: 55vh 30vw;
     font-size: 1.2rem;
     font-weight: 300;
     font-family: 'Montserrat', serif;
     color: white;
     text-align: center;
 }
-
 
 /* 
 ================================================================================================
@@ -241,6 +267,9 @@
 
     }
 
+
+
+    
 }
 
 
@@ -266,6 +295,10 @@
 1.  Global Styles
 2.  navBar Classes
 3.  Button Classes
+4. Typography Classes
+5.  Image Classes
+
+
 ======================
 */
 
@@ -284,8 +317,7 @@
 */
     
     body{
-        overflow: hidden;
-        position: fixed;
+        overflow-x: hidden;
     }
 
     .nav {
@@ -384,6 +416,64 @@
     background-color: transparent;
 }
 
+.arrow-btn-container{
+    display: none;
+}
+
+/* 
+===========================
+
+   4. Typography Classes
+
+===========================
+*/
+
+
+.img__h1{
+    position: absolute;
+    padding: 30vh 10vw;
+    bottom: 20vh;
+    font-size: 3vmax;
+    font-family: 'Montserrat', serif;
+    color: white;
+}
+
+.img__p{
+    position: absolute;
+    padding: 55vh 10vw;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Montserrat', serif;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+/* 
+======================
+
+   4. Image Classes
+
+======================
+*/
+
+
+
+.div__img{
+    overflow-x: hidden;
+    width: 1000px;
+    height: 1000px;
+}
+
+.div__img4{
+    width: 1000px;
+    height: 1000px;
+}
+
+
+
 
 
 }
@@ -461,4 +551,17 @@
  
     transform: rotate(45deg) translate(-6px, -8px);
 
+}
+
+.active-right-arrow{
+    margin-left: -100%;
+}
+.active-right-arrow2{
+    margin-left: -200%;
+}
+.active-right-arrow3{
+    margin-left: -300%;
+}
+.active-right-arrow4{
+    margin-left: -400%;
 }

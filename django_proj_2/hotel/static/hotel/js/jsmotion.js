@@ -59,6 +59,33 @@ function navChangeColor(){
 }
 
 
+function arrowMotion(){
+    const rightArrow = document.querySelector('.right-arrow');
+    const leftArrow = document.querySelector('.left-arrow');
+    const pauseBtn = document.querySelector('.pause-btn');
+    const slides = document.querySelector('.slides')
+    const slidesImg = document.querySelectorAll('.slides img')
+
+    var counter = 1;
+
+    if (counter <= 1 ){
+        rightArrow.addEventListener('click', () => {
+            slides.classList.add('active-right-arrow');
+        })
+        counter++;
+
+    }
+
+    else if (counter == ){}
+
+    
+    leftArrow.addEventListener('click', () => {
+        slides.classList.remove('active-right-arrow');
+    })
+
+}
+
+
 
 
 //function that activates all of them in one main function
@@ -67,7 +94,7 @@ function mainApp(){
 
 navMotion();
 navChangeColor();
-
+arrowMotion()
 };
 
 

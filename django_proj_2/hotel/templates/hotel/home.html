@@ -1,5 +1,42 @@
 {% extends 'hotel/base.html' %}
+{% load static %}
+
 
 {% block content %}
+    <div class='image-container'>
+        <h1 class='img__h1'>Full enjoyment and unparalleled comfort All in the same place.</h1>
+        <p class='img__p'>Looking for a comfortable accommodation? What gives you
+            a happy and fun stay? Are you looking for a unique experience? All that and
+            more in just one place: 
+            Our unparalleled Hotel.
+        </p>
+        <div class='slider'>
+            <div class='slides'>
+                <div>
+                    <img class='div__img' src="{% static 'hotel/images/portada1_2.jpg' %}" alt="">
+                </div>
 
+                <div>
+                    <img class='div__img2' src="{% static 'hotel/images/portada2.jpg' %}" alt="">
+                </div>
+
+                <div>
+                    <img class='div__img3' src="{% static 'hotel/images/portada3_2.jpg' %}" alt="">
+                </div>
+
+                <div>
+                    <img class='div__img3' src="{% static 'hotel/images/portada4_2.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class='arrow-btn-container'>
+            <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
+            <img class='left-arrow' src="{% static 'hotel/icons/left.svg' %}" alt="">
+            <img class= 'pause-btn' src="{% static 'hotel/icons/pause.svg' %}" alt="">
+        </div>
+    </div>
+    <div>
+        <img class="div__img4" src="{% static 'hotel/images/portada5_2.jpg'%}" alt="">
+    </div>
 {% endblock content %}
+

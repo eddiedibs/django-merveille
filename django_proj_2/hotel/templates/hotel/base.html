@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale:=1.0">
     <link rel="stylesheet" type=text/css href="{% static 'hotel/css/normalize.css' %}">
     <link rel="stylesheet" type=text/css href="{% static 'hotel/css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
     <!-- Navigation Bar -->
     <div>
         <nav class='nav'>
-            <a href="#"><img class="logo" src="{% static 'hotel/images/Logos/Logotipo_Blanco.svg' %}" alt=""></a>
+            <a href="{% url 'hotel-main'%}"><img class="logo" src="{% static 'hotel/images/Logos/Logotipo_Blanco.svg' %}" alt=""></a>
 
             <ul class='nav__list'>
                 
-                <a class='btn-list-1' href="#">Book now</a>
+                <a class='btn-list-1' href="{% url 'hotel-booknow' %}">Book now</a>
                 <a href="#">Events</a>
                 <a href="#">Offers</a>
             
@@ -43,32 +43,7 @@
 
         </nav>
     </div>
-   
-   
-    <div class='image-container'>
-        <h1 class='img__h1'>Full enjoyment and unparalleled comfort All in the same place.</h1>
-        <p class='img__p'>Looking for a comfortable accommodation? What gives you
-            a happy and fun stay? Are you looking for a unique experience? All that and
-            more in just one place: 
-            Our unparalleled Hotel.
-        </p>
-        <img class='div__img' src="{% static 'hotel/images/portada1_2.jpg' %}" alt="">
-        <div class='arrow-btn-container'>
-            <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
-            <img class='left-arrow' src="{% static 'hotel/icons/left.svg' %}" alt="">
-            <img class= 'pause-btn' src="{% static 'hotel/icons/pause.svg' %}" alt="">
-
-        </div>
-        
-            
-    </div>
-
-
-    <div>
-        <img class="div__img2" src="{% static 'hotel/images/portada5_2.jpg'%}" alt="">
-    </div>
-
-
+    {% block content %} {% endblock %}
     <script src="{% static 'hotel/js/jsmotion.js' %}"></script>
 </body>
 </html>

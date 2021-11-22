@@ -12,8 +12,8 @@ def home(request):
 
 
 
-def about(request):
-    return render(request, 'hotel/about.html')
+def booknow(request):
+    return render(request, 'hotel/booknow.html')
 
 
 
