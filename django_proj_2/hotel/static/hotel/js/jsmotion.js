@@ -58,11 +58,10 @@ function navChangeColor(){
     
 }
 
-
+// Function that allows arrows in main page to slide among images
 function arrowMotion(){
     const rightArrow = document.querySelector('.right-arrow');
     const leftArrow = document.querySelector('.left-arrow');
-    //const pauseBtn = document.querySelector('.pause-btn');
     const slides = document.querySelector('.slides')
     const slidesImg = document.querySelectorAll('.slides__img')
 
@@ -74,11 +73,7 @@ function arrowMotion(){
 
     */
 
-    slidesImg.forEach((img, i) => {
-        img.style.left = i * 100 + "%";
-    });
-    
-    let slideWidth = slidesImg[0].clientWidth;
+    // For slide Arrows
     let currentSlide = [0, 100, 200, 300];
 
     slidesImg[0].classList.add('active');
@@ -107,6 +102,10 @@ function arrowMotion(){
     function goToSlide(slideNumber){
         slides.style.marginLeft = "-" + slideNumber + "%";
     }
+
+
+  
+
 
 
 }

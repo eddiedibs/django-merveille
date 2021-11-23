@@ -180,16 +180,6 @@ body{
     height: 5vh;
 }
 
-.pause-btn{
-    position: absolute;
-    left: 88.5vw;
-    top: 40vmax;
-    width: 3vw;
-    height: 5vh;
-}
-
-
-
 /* 
 ======================
 
@@ -198,6 +188,9 @@ body{
 ======================
 */
 
+.image-container{
+    width: 100%;
+}
 
 .slider{
     width:100%;
@@ -210,9 +203,6 @@ body{
     width: 100%;
     transition-duration: 700ms;
 }
-
-
-
 
 
 
@@ -463,7 +453,6 @@ body{
 
 
 .div__img{
-    overflow-x: hidden;
     width: 1000px;
     height: 1000px;
 }
@@ -473,6 +462,11 @@ body{
     height: 50vh;
 }
 
+
+.div__img5{
+    width: 100vw;
+    height: 50vh;
+}
 
 
 
@@ -522,6 +516,15 @@ body{
     transform: translateX(0%);
 }
 
+.startBtn-active{
+    opacity: 0
+}
+
+.stopBtn-active{
+    display: inline;
+}
+
+
 
 @keyframes navFadeLists{
     from{
@@ -538,6 +541,9 @@ body{
 
     }
 }
+
+
+
 
 .toggle .burger__div1 {
     transform: rotate(-45deg) translate(-6px, 8px);
