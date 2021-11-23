@@ -469,8 +469,8 @@ body{
 }
 
 .div__img4{
-    width: 1000px;
-    height: 1000px;
+    width: 100vw;
+    height: 50vh;
 }
 
 
@@ -554,15 +554,3 @@ body{
 
 }
 
-.active-right-arrow0{
-    margin-left: -100%;
-}
-.active-right-arrow1{
-    margin-left: -200%;
-}
-.active-right-arrow2{
-    margin-left: -300%;
-}
-.active-right-arrow3{
-    margin-left: -400%;
-}

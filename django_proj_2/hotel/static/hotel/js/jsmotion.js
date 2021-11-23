@@ -36,7 +36,7 @@ const navMotion = () => {
 
 function navChangeColor(){
     const navBar = document.querySelector('.nav');
-    const img = document.querySelector('.div__img');
+    const img = document.querySelector('.slides');
 
     window.addEventListener('scroll', () => {
         let contentPosition = img.getBoundingClientRect().top;
@@ -88,6 +88,7 @@ function arrowMotion(){
                 goToSlide(currentSlide[2]);
                 rightArrow.addEventListener('click', ()=> {
                     goToSlide(currentSlide[2]);
+                    
                 })
             })
             leftArrow.addEventListener('click', () => {
@@ -119,10 +120,9 @@ function mainApp(){
 
 navMotion();
 navChangeColor();
-arrowMotion()
-};
+arrowMotion();
 
-
+}
 mainApp();
 
 
