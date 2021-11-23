@@ -62,26 +62,51 @@ function navChangeColor(){
 function arrowMotion(){
     const rightArrow = document.querySelector('.right-arrow');
     const leftArrow = document.querySelector('.left-arrow');
-    const pauseBtn = document.querySelector('.pause-btn');
+    //const pauseBtn = document.querySelector('.pause-btn');
     const slides = document.querySelector('.slides')
-    const slidesImg = document.querySelectorAll('.slides img')
+    const slidesImg = document.querySelectorAll('.slides__img')
 
-    var counter = 1;
+    /*
+        slidesImg[0] = 0
+        slidesImg[1] = 100%
+        slidesImg[2] = 200%
+        
 
-    if (counter <= 1 ){
-        rightArrow.addEventListener('click', () => {
-            slides.classList.add('active-right-arrow');
-        })
-        counter++;
+    */
 
+    slidesImg.forEach((img, i) => {
+        img.style.left = i * 100 + "%";
+    });
+    
+    let slideWidth = slidesImg[0].clientWidth;
+    let currentSlide = [0, 100, 200, 300];
+
+    slidesImg[0].classList.add('active');
+    rightArrow.addEventListener('click', ()=> {
+        goToSlide(currentSlide[1]);
+            rightArrow.addEventListener('click', ()=> {
+                goToSlide(currentSlide[2]);
+                rightArrow.addEventListener('click', ()=> {
+                    goToSlide(currentSlide[2]);
+                })
+            })
+            leftArrow.addEventListener('click', () => {
+                goToSlide(currentSlide[1]);
+                leftArrow.addEventListener('click', () => {
+                    goToSlide(currentSlide[0]);
+                    rightArrow.addEventListener('click', ()=> {
+                        goToSlide(currentSlide[1]);
+                    })
+                    
+                })
+            
+            })
+    })
+
+    function goToSlide(slideNumber){
+        slides.style.marginLeft = "-" + slideNumber + "%";
     }
 
-    else if (counter == ){}
-
-    
-    leftArrow.addEventListener('click', () => {
-        slides.classList.remove('active-right-arrow');
-    })
 
 }
 
