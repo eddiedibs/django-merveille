@@ -363,15 +363,6 @@ body{
 
 
 
-    .burger{
-        display: block;
-        position: absolute;
-        right: 10vw;
-        transition: all 0.3s ease;
-    }
-
-
-
 
 /* 
 ======================
@@ -514,14 +505,6 @@ body{
 
 .nav-active {
     transform: translateX(0%);
-}
-
-.startBtn-active{
-    opacity: 0
-}
-
-.stopBtn-active{
-    display: inline;
 }
 
 
