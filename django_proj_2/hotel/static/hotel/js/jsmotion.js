@@ -70,12 +70,13 @@ const navMotion = () => {
 
 
 const navMotion2 = () => {
+    const blueBtn = document.querySelector('.btn-list-1')
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav__list2');
-    const nav2 = document.querySelector('.nav2');
     const lists = document.querySelectorAll('.nav__list2 a');
 
     burger.addEventListener('click', () => {
+        blueBtn.classList.toggle('bluebtn-active');
         nav.classList.toggle('nav-active');
         lists.forEach((link, index) => {
             if (link.style.animation){
