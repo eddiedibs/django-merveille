@@ -636,8 +636,8 @@ body{
     transform: translateX(0%);
 }
 
-.z-index-active{
-    z-index: 0;
+.nav-active2 {
+    width: 70%;
 }
 
 
