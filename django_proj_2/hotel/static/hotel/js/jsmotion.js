@@ -1,5 +1,35 @@
+/*
+==================================================================================
 
-//Function that shows a slidable menu for mobile devices
+
+                          Table of Contents
+
+
+1. navMotion: Function that shows a slidable menu for mobile devices.
+
+2. navMotion2: Function that shows a slidable menu for PC.
+
+3. navChangeColor: Function that turns navBar visible when scrolled.
+
+4. arrowMotion: Function that allows arrows in main page to slide among images.
+
+5. mainApp: Function that activates all of them in one main function.
+
+
+=================================================================================
+*/
+
+
+/*
+===============================================================
+                        1. navMotion 
+
+    Function that shows a slidable menu for mobile devices
+
+
+===============================================================
+*/
+
 
 const navMotion = () => {
     const burger = document.querySelector('.burger');
@@ -28,11 +58,59 @@ const navMotion = () => {
 
 };
 
+/*
+===============================================================
+                        2. navMotion2
+
+          Function that shows a slidable menu for PC
+
+
+===============================================================
+*/
+
+
+const navMotion2 = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav__list2');
+    const nav2 = document.querySelector('.nav2');
+    const lists = document.querySelectorAll('.nav__list2 a');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        lists.forEach((link, index) => {
+            if (link.style.animation){
+                link.style.animation = ''
+            }
+            else {
+                link.style.animation = `navFadeLists 1.5s ease forwards ${index / 2.5}s`;
+                console.log(index);
+            }
+            
+        });
+
+        burger.classList.toggle('toggle');
+
+
+    });
+    
+
+    
+
+};
 
 
 
 
-//Function that turns navBar visible when scrolled
+/*
+===============================================================
+                        3. navChangeColor 
+
+    Function that turns navBar visible when scrolled
+
+
+===============================================================
+*/
+
 
 function navChangeColor(){
     const navBar = document.querySelector('.nav');
@@ -58,7 +136,25 @@ function navChangeColor(){
     
 }
 
-// Function that allows arrows in main page to slide among images
+
+
+
+
+
+
+
+
+/*
+===============================================================
+                        4. arrowMotion 
+
+    Function that allows arrows in main page to slide among images
+
+
+===============================================================
+*/
+
+
 function arrowMotion(){
     const rightArrow = document.querySelector('.right-arrow');
     const leftArrow = document.querySelector('.left-arrow');
@@ -71,12 +167,13 @@ function arrowMotion(){
         slidesImg[2] = 200%
         
 
+        NOTE: slidesImg is not used in this version
+
     */
 
     // For slide Arrows
     let currentSlide = [0, 100, 200, 300];
 
-    slidesImg[0].classList.add('active');
     rightArrow.addEventListener('click', ()=> {
         goToSlide(currentSlide[1]);
             rightArrow.addEventListener('click', ()=> {
@@ -113,13 +210,37 @@ function arrowMotion(){
 
 
 
-//function that activates all of them in one main function
+/*
+===============================================================
+                        5. mainApp 
 
+    Function that activates all of them in one main function
+
+
+===============================================================
+*/
 function mainApp(){
 
-navMotion();
-navChangeColor();
-arrowMotion();
+    /*Function that checks if the screen is bigger or smaller than 768px.
+    And if it is, it will activate the navMotion function for PC*/
+
+    function navSelector(x) {
+        if (x.matches) { // If media query matches
+            navMotion();
+        } 
+        else {
+            navMotion2();
+
+        }
+    }
+  
+    var x = window.matchMedia("(max-width: 768px)")
+    navSelector(x) // Call listener function at run time
+    x.addListener(navSelector) // Attach listener function on state changes 
+
+    //Rest of functions
+    navChangeColor();
+    arrowMotion();
 
 }
 mainApp();

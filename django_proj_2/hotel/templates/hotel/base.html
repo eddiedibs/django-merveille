@@ -25,14 +25,12 @@
     <!-- Navigation Bar -->
     <div>
         <nav class='nav'>
-            <a href="{% url 'hotel-main'%}"><img class="logo" src="{% static 'hotel/images/Logos/Logotipo_Blanco.svg' %}" alt=""></a>
+            <a class='logo_link' href="{% url 'hotel-main'%}"><img class="logo" src="{% static 'hotel/images/Logos/Logotipo_Blanco.svg' %}" alt=""></a>
 
             <ul class='nav__list'>
                 
                 <a class='btn-list-1' href="{% url 'hotel-booknow' %}">Book now</a>
-                <a href="#">Events</a>
-                <a href="#">Offers</a>
-            
+                
                 
             </ul>
             <div class='burger'>
@@ -40,8 +38,21 @@
                 <div class='burger__div2'></div>
                 <div class='burger__div3'></div>
             </div>
-
         </nav>
+    
+        <nav class='nav2'>
+            <ul class='nav__list2'>
+            
+                <a href="#">Gallery</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Services</a>
+                <a href="#">Meetings</a>
+                <a href="#">Dinning</a>
+        
+            
+            </ul>
+        </nav>
+
     </div>
     {% block content %} {% endblock %}
     <script src="{% static 'hotel/js/jsmotion.js' %}"></script>

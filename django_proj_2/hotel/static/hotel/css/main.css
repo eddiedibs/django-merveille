@@ -7,6 +7,8 @@
 
 1.  Global Styles
 2.  navBar Classes
+    2.1 First navBar Classes
+    2.2 Second navBar Classes
 3.  Button Classes 
 4.  Image  Classes 
 5.  Typography Classes
@@ -44,10 +46,42 @@ body{
 
 
 
+
+
+/* 
+======================
+
+   2. NavBar Classes
+
+======================
+*/
+
+/* 
+================================
+
+/// 2.1 First navBar Classes ///
+
+================================
+*/
+
+.logo{
+    position:absolute;
+    top: 5vh;
+    width: 10vw;
+    left: 3vw;
+    height: 6vh;
+
+}
+
+.logo_link{
+    z-index: 3;
+
+}
+
 .nav {
     position: fixed;
     display: flex;
-    z-index: 500;
+    z-index: 2;
     justify-content: space-around;
     background-color: transparent;
     border-bottom: 0.2vh solid white;
@@ -59,28 +93,6 @@ body{
     font-family: 'Montserrat', serif;
     font-size: 15px;
 }
-
-
-
-/* 
-======================
-
-   2. NavBar Classes
-
-======================
-*/
-
-
- 
-.logo{
-    position:absolute;
-    top: 5vh;
-    width: 10vw;
-    left: 3vw;
-    height: 6vh;
-
-}
-
 
 .nav__list {
     display: flex;
@@ -103,10 +115,10 @@ body{
 
 .burger {
     position: relative;
-    left: 82vw;
-    display: none;
     cursor: pointer;
     transition-duration: 500ms;
+    right: -20vw;
+    transition: all 0.3s ease;
 }
 
 .burger div {
@@ -118,6 +130,50 @@ body{
     transition-duration: 500ms;
 }
 
+/* 
+=================================
+
+/// 2.2 Second navBar Classes ///
+
+=================================
+*/
+
+
+.nav2 {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    left: 50%;
+    min-height: 20vh;
+    font-family: 'Montserrat', serif;
+    font-size: 16.3vh;
+}
+
+.nav__list2{
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #2B2B2B;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    width: 50%;
+    transform:translateX(100%);
+    transition-duration: 500ms;
+}
+
+.nav__list2 a{
+
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+
+}
 
 /* 
 ======================
@@ -125,6 +181,13 @@ body{
   3. Button Classes
 
 ======================
+*/
+/* 
+=================================
+
+/// 3.1 First navBar Button classes ///
+
+=================================
 */
 
 .nav__list a{
@@ -154,6 +217,48 @@ body{
 
 .btn-list-1:hover{
     background-color: #002940;
+}
+
+/* 
+=================================
+
+/// 3.2 Second navBar Button classes ///
+
+=================================
+*/
+.nav__list2 a{
+    position: relative;
+    font-size: 3vh;
+    padding-top: 30%;
+    padding-right: 60%;  
+    transition-duration: 500ms;
+    opacity: 0;
+    text-align: center;  
+
+}
+
+
+.btn-list-2:hover{
+    background-color: #002940;
+}
+
+.nav__list2 a {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.nav__list2 a::after{
+    content: '';
+    height: 2px;
+    transition-duration: 500ms;
+    width: 0%;
+    background: #ffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 
@@ -499,6 +604,15 @@ body{
 ======================
 */
 
+.nav__list2-active a::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #ffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 
 .nav-background-active{
     background-color: #2B2B2B;
@@ -508,22 +622,14 @@ body{
 }
 
 
-.transparentNavbar-active{
-    background-color: transparent;
-}
 
 .nav-active {
     transform: translateX(0%);
 }
 
-.startBtn-active{
-    opacity: 0
+.z-index-active{
+    z-index: 0;
 }
-
-.stopBtn-active{
-    display: inline;
-}
-
 
 
 @keyframes navFadeLists{
