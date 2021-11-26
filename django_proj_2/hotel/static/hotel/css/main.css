@@ -88,8 +88,8 @@ body{
     transition-duration: 500ms;
     align-items: center;
     width: 90%;
-    left: 5%;
     min-height: 14vh;
+    left: 5%;
     font-family: 'Montserrat', serif;
     font-size: 15px;
 }
