@@ -91,8 +91,7 @@ const navMotion2 = () => {
         });
 
         burger.classList.toggle('toggle');
-
-
+        
     });
     
 
@@ -240,18 +239,18 @@ function mainApp(){
     navSelector(x) // Call listener function at run time
     x.addListener(navSelector) // Attach listener function on state changes 
 
+
+    
     //Rest of functions
-    navChangeColor();
     arrowMotion();
+    navChangeColor();
+
 
 }
 mainApp();
 
 
     
-
-
-
 
 
 
