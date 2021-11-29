@@ -82,6 +82,7 @@ const navMotion2 = () => {
         lists.forEach((link, index) => {
             if (link.style.animation){
                 link.style.animation = ''
+
             }
             else {
                 link.style.animation = `navFadeLists 1.5s ease forwards ${index / 2.5}s`;
@@ -91,6 +92,9 @@ const navMotion2 = () => {
         });
 
         burger.classList.toggle('toggle');
+
+        
+
         
     });
     
@@ -106,7 +110,7 @@ const navMotion2 = () => {
 ===============================================================
                         3. navChangeColor 
 
-    Function that turns navBar visible when scrolled
+    Function that turns navBar visible when scrolled (Mobile Devices)
 
 
 ===============================================================
@@ -115,10 +119,10 @@ const navMotion2 = () => {
 
 function navChangeColor(){
     const navBar = document.querySelector('.nav');
-    const img = document.querySelector('.slides');
+    const body = document.querySelector('body');
 
     window.addEventListener('scroll', () => {
-        let contentPosition = img.getBoundingClientRect().top;
+        let contentPosition = body.getBoundingClientRect().top;
         let screenPosition = window.innerHeight;
         
         if (contentPosition < -41){
@@ -222,12 +226,14 @@ function arrowMotion(){
 */
 function mainApp(){
 
-    /*Function that checks if the screen is bigger or smaller than 768px.
-    And if it is, it will activate the navMotion function for PC*/
+    /*Function that checks if the screen is bigger or smaller than 700px.
+    And if it is bigger, it will activate the navMotion function for PC, and if it's not
+    it will activate specific functions for Mobile Devices */
 
     function navSelector(x) {
         if (x.matches) { // If media query matches
             navMotion();
+            navChangeColor();
         } 
         else {
             navMotion2();
@@ -235,7 +241,7 @@ function mainApp(){
         }
     }
   
-    var x = window.matchMedia("(max-width: 768px)")
+    var x = window.matchMedia("(max-width: 700px)")
     navSelector(x) // Call listener function at run time
     x.addListener(navSelector) // Attach listener function on state changes 
 
@@ -243,7 +249,6 @@ function mainApp(){
     
     //Rest of functions
     arrowMotion();
-    navChangeColor();
 
 
 }

@@ -240,13 +240,15 @@ body{
     top: 0.8vh;
     font-size: 2vh;
     line-height: 5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width:auto;
 }
 
 
 
 
 .btn-list-1:hover{
-    position: relative;
     background-color: #B28659;
     border: 2px solid white;
 }
@@ -268,7 +270,7 @@ body{
 .nav__list2 a{
     position: relative;
     font-size: 2vh;
-    padding-top: 30%;
+    padding-top: 20%;
     padding-right: 60%;  
     opacity: 0;
     text-align: center;  
@@ -290,9 +292,9 @@ body{
     content: "";
     position: absolute;
     left: 1.3vw;
-    bottom: 0;
+    bottom: 3vh;
     width: 0;
-    height: 2px;
+    height: 3px;
     background-color: white;
     transition: width 0.25s ease-out;
 
@@ -318,14 +320,24 @@ body{
 }
 
 .slider{
-    width:100%;
     margin: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
+
+.slides__img, .div__img{
+    width:100vw;
+    height: 100vh;
+    
+}
+
+
 
 .slides{
     display: flex;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
     transition-duration: 700ms;
 }
 
@@ -400,8 +412,9 @@ body{
 */
 
 
-@media screen and (max-width:768px){
-    
+@media screen 
+and (max-width:768px)
+{    
 /* 
 ======================
       Table of
@@ -464,7 +477,7 @@ body{
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.651);
+        background-color: rgba(0, 0, 0, 0.8);
         display: flex;
         flex-direction: column;
         border: none;
@@ -511,7 +524,7 @@ body{
 .nav__list a{
     position: relative;
     font-size: 3vh;
-    padding: 1vh;    
+    padding: 5vh 1vw;    
 
 }
 
@@ -583,20 +596,17 @@ body{
 
 
 
+.slides__img, .div__img{
+    width:100vw;
+    height: 100vh;
+}
+
 .div__img{
-    width: 1000px;
-    height: 1000px;
-}
-
-.div__img4{
+    object-fit: cover;
+    object-position: center;
+    image-resolution: 1000px;
     width: 100vw;
-    height: 50vh;
-}
-
-
-.div__img5{
-    width: 100vw;
-    height: 50vh;
+    height: 100vh;
 }
 
 
@@ -647,17 +657,15 @@ body{
     left: 0;
 }
 
-.bluebtn-active{
-    margin-right: 20vw;
-}
 
 .nav-active {
     transform: translateX(0%);
 }
 
 .nav-active2 {
-    width: 75%;
+    width: 70%;
 }
+
 
 
 @keyframes navFadeLists{
