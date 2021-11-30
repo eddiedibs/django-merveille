@@ -371,6 +371,7 @@ body{
     padding: 38vh 34vw;
     font-size: 2.6vmax;
     font-family: 'Montserrat', serif;
+    text-align: center;
     color: white;
 }
 
@@ -515,10 +516,8 @@ and (max-width:768px)
 
     .burger{
         display: block;
-        position: absolute;
+        position: relative;
         position: fixed;
-        top: 8%;
-        right: 10%;
         transition: all 0.3s ease;
     }
 
@@ -608,7 +607,7 @@ and (max-width:768px)
 
 
 
-    .slides__img{
+    .slides__img img{
         width:100vw;
         height: 100vh;
         object-fit: cover;
