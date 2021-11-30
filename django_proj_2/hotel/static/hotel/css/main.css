@@ -91,7 +91,7 @@ body{
 .nav {
     position: fixed;
     display: flex;
-    z-index: 2;
+    z-index: 1;
     justify-content: space-around;
     background-color: transparent;
     border-bottom: 0.2vh solid white;
@@ -123,24 +123,6 @@ body{
 
 }
 
-.burger {
-    position: relative;
-    cursor: pointer;
-    transition-duration: 500ms;
-    right: -20vw;
-    transition: all 0.3s ease;
-}
-
-
-.burger div {
-    height: 4px;
-    width: 40px;
-    margin: 6px;
-    border-radius: 3px;
-    background-color: #ffff;
-    transition-duration: 500ms;
-}
-
 /* 
 =================================
 
@@ -151,13 +133,13 @@ body{
 
 
 .nav2 {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
-    display: flex;
+    display: inline;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
-    left: 50%;
+    width: 3%;
+    right:0;
     min-height: 20vh;
     font-family: 'Montserrat', serif;
     font-size: 16.3vh;
@@ -173,8 +155,8 @@ body{
     flex-direction: column;
     border: none;
     align-items: center;
-    width: 50%;
-    transform:translateX(100%);
+    width: 100%;
+    transform: translateX(100%);
     transition-duration: 500ms;
 }
 
@@ -185,6 +167,30 @@ body{
     font-weight: bold;
 
 }
+
+
+.burger {
+    z-index: 3;
+    position: absolute;
+    position: fixed;
+    cursor: pointer;
+    transition-duration: 500ms;
+    right: 10%;
+    top:5%;
+    transition: all 0.5s ease;
+}
+
+
+.burger div {
+    height: 4px;
+    width: 40px;
+    margin: 6px;
+    border-radius: 3px;
+    background-color: #ffff;
+    transition-duration: 500ms;
+}
+
+
 
 /* 
 ======================
@@ -273,7 +279,7 @@ body{
 .nav__list2 a{
     position: relative;
     font-size: 2vh;
-    padding-top: 20%;
+    padding-top: 15%;
     padding-right: 60%;  
     opacity: 0;
     text-align: center;  
@@ -294,7 +300,7 @@ body{
 .nav__list2 a::before{
     content: "";
     position: absolute;
-    left: 1.3vw;
+    left: 2vw;
     bottom: 3vh;
     width: 0;
     height: 3px;
@@ -319,31 +325,28 @@ body{
 */
 
 .image-container{
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .slider{
-    margin: auto;
     overflow: hidden;
 }
 
-.slides__img, .div__img{
+.div__img{
     width:100vw;
     height: 100vh;
     
 }
 
-.slides{
-    margin-bottom: 11.05rem;
-
+.slides__img img{
+    width: 100vw;
 }
-
-
 
 .slides{
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     transition-duration: 700ms;
@@ -374,7 +377,7 @@ body{
 .image-container__p{
     position: absolute;
     padding: 55vh 30vw;
-    font-size: 1.2rem;
+    font-size: 1.5vmax;
     font-weight: 300;
     font-family: 'Montserrat', serif;
     color: white;
@@ -617,7 +620,10 @@ and (max-width:768px)
     height: 100vh;
 }
 
+.slides{
+    margin-bottom: 1rem;
 
+}
 
 
 }
@@ -674,6 +680,13 @@ and (max-width:768px)
     width: 70%;
 }
 
+.burgerMotion{
+    transform: translateX(100%);
+}
+
+.nav2TotalWidth{
+    width: 30%;
+}
 
 
 @keyframes navFadeLists{

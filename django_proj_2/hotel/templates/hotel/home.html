@@ -2,34 +2,38 @@
 {% load static %}
 
 
-{% block contents %}
+{% block content %}
     <div class='image-container'>
-        <h1 class='image-container__h1'>Full enjoyment and unparalleled comfort All in the same place.</h1>
+        <h1 class='image-container__h1'>Full enjoyment and unparalleled comfort All at the same place.</h1>
         <p class='image-container__p'>Looking for a comfortable accommodation? What gives you
             a happy and fun stay? Are you looking for a unique experience? All that and
             more in just one place: 
             Our unparalleled Hotel.
         </p>
-        <div class='slider'>
-            <div class='slides'>
-                <div class='slides__img'>
-                    <img src="{% static 'hotel/images/portada1_2.jpg' %}" alt="">
-                </div>
+    <div>
+        <div>
+            <div class='slider'>
+                <div class='slides'>
+                    <div class='slides__img'>
+                        <img src="{% static 'hotel/images/portada1_2.jpg' %}" alt="">
+                    </div>
 
-                <div class='slides__img'>
-                    <img src="{% static 'hotel/images/portada2.jpg' %}" alt="">
-                </div>
+                    <div class='slides__img'>
+                        <img src="{% static 'hotel/images/portada2.jpg' %}" alt="">
+                    </div>
 
-                <div class='slides__img'>
-                    <img src="{% static 'hotel/images/portada3_2.jpg' %}" alt="">
-                </div>
+                    <div class='slides__img'>
+                        <img src="{% static 'hotel/images/portada3_2.jpg' %}" alt="">
+                    </div>
 
+                </div>
+            </div>
+            <div class='arrow-btn-container'>
+                <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
+                <img class='left-arrow' src="{% static 'hotel/icons/left.svg' %}" alt="">
             </div>
         </div>
-        <div class='arrow-btn-container'>
-            <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
-            <img class='left-arrow' src="{% static 'hotel/icons/left.svg' %}" alt="">
-        </div>
+    </div>  
     </div>
     <div>
         <img class="div__img" src="{% static 'hotel/images/portada5_2.jpg'%}" alt="">

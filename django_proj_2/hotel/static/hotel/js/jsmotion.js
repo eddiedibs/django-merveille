@@ -43,7 +43,7 @@ const navMotion = () => {
                 link.style.animation = ''
             }
             else {
-                link.style.animation = `navFadeLists 1.5s ease forwards ${index / 2.5}s`;
+                link.style.animation = `navFadeLists 0.5s ease forwards ${index / 5.5}s`;
                 console.log(index);
             }
             
@@ -70,22 +70,24 @@ const navMotion = () => {
 
 
 const navMotion2 = () => {
-    const nav2 = document.querySelector('.nav')
+    const nav = document.querySelector('.nav');
+    const nav2 = document.querySelector('.nav2');
     const blueBtn = document.querySelector('.btn-list-1')
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav__list2');
+    const navList = document.querySelector('.nav__list2');
     const lists = document.querySelectorAll('.nav__list2 a');
 
     burger.addEventListener('click', () => {
-        nav2.classList.toggle('nav-active2')
-        nav.classList.toggle('nav-active');
+        nav.classList.toggle('nav-active2')
+        navList.classList.toggle('nav-active');
+        nav2.classList.toggle('nav2TotalWidth');
         lists.forEach((link, index) => {
             if (link.style.animation){
                 link.style.animation = ''
 
             }
             else {
-                link.style.animation = `navFadeLists 1.5s ease forwards ${index / 2.5}s`;
+                link.style.animation = `navFadeLists 0.5s ease forwards ${index / 3.5}s`;
                 console.log(index);
             }
             
@@ -120,6 +122,8 @@ const navMotion2 = () => {
 function navChangeColor(){
     const navBar = document.querySelector('.nav');
     const body = document.querySelector('body');
+    const burger = document.querySelector('.burger');
+
 
     window.addEventListener('scroll', () => {
         let contentPosition = body.getBoundingClientRect().top;
@@ -127,10 +131,14 @@ function navChangeColor(){
         
         if (contentPosition < -41){
             navBar.classList.add('nav-background-active')
+            burger.classList.add('burgerMotion')
+
 
         }
         else {
             navBar.classList.remove('nav-background-active')
+            burger.classList.remove('burgerMotion')
+
 
 
         }
@@ -233,7 +241,7 @@ function mainApp(){
     function navSelector(x) {
         if (x.matches) { // If media query matches
             navMotion();
-            navChangeColor();
+            
         } 
         else {
             navMotion2();
@@ -249,6 +257,7 @@ function mainApp(){
     
     //Rest of functions
     arrowMotion();
+    navChangeColor();
 
 
 }
