@@ -226,7 +226,7 @@ function arrowMotion(){
 */
 function mainApp(){
 
-    /*Function that checks if the screen is bigger or smaller than 700px.
+    /*Function that checks if the screen is bigger or smaller than 768px.
     And if it is bigger, it will activate the navMotion function for PC, and if it's not
     it will activate specific functions for Mobile Devices */
 
@@ -241,7 +241,7 @@ function mainApp(){
         }
     }
   
-    var x = window.matchMedia("(max-width: 700px)")
+    var x = window.matchMedia("(max-width: 768px)")
     navSelector(x) // Call listener function at run time
     x.addListener(navSelector) // Attach listener function on state changes 
 

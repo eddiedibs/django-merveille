@@ -81,6 +81,8 @@ body{
 
 }
 
+
+
 .logo_link{
     z-index: 3;
 
@@ -128,6 +130,7 @@ body{
     right: -20vw;
     transition: all 0.3s ease;
 }
+
 
 .burger div {
     height: 4px;
@@ -328,6 +331,11 @@ body{
     width:100vw;
     height: 100vh;
     
+}
+
+.slides{
+    margin-bottom: 11.05rem;
+
 }
 
 
