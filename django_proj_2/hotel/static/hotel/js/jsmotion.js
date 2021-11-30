@@ -128,7 +128,48 @@ function navChangeColor(){
     window.addEventListener('scroll', () => {
         let contentPosition = body.getBoundingClientRect().top;
         let screenPosition = window.innerHeight;
-        
+    
+        if (contentPosition < -41){
+            navBar.classList.add('nav-background-active')
+
+
+        }
+        else {
+            navBar.classList.remove('nav-background-active')
+
+
+
+        }
+
+
+    })
+
+    
+}
+
+
+
+/*
+===============================================================
+                        3. navChangeColor2 
+
+    Function that turns navBar visible when scrolled (PC)
+
+
+===============================================================
+*/
+
+
+function navChangeColor2(){
+    const navBar = document.querySelector('.nav');
+    const body = document.querySelector('body');
+    const burger = document.querySelector('.burger');
+
+
+    window.addEventListener('scroll', () => {
+        let contentPosition = body.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+    
         if (contentPosition < -41){
             navBar.classList.add('nav-background-active')
             burger.classList.add('burgerMotion')
@@ -148,9 +189,6 @@ function navChangeColor(){
 
     
 }
-
-
-
 
 
 
@@ -241,10 +279,12 @@ function mainApp(){
     function navSelector(x) {
         if (x.matches) { // If media query matches
             navMotion();
+            navChangeColor();
             
         } 
         else {
             navMotion2();
+            navChangeColor2();
 
         }
     }

@@ -514,10 +514,11 @@ and (max-width:768px)
 
 
     .burger{
-        z-index: 4;
         display: block;
         position: absolute;
-        right: 10vw;
+        position: fixed;
+        top: 8%;
+        right: 10%;
         transition: all 0.3s ease;
     }
 
@@ -532,98 +533,101 @@ and (max-width:768px)
 ======================
 */
 
-.nav__list a{
-    position: relative;
-    font-size: 3vh;
-    padding: 5vh 1vw;    
+    .nav__list a{
+        position: relative;
+        font-size: 3vh;
+        padding: 5vh 1vw;    
 
-}
+    }
 
-.nav__list a{
-    opacity: 0;
-    text-align: center;
-}
-
-
-
-.btn-list-1:hover{
-    background-color: #B28659;
-}
-
-.nav__list a {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    border: none;
-    background-color: transparent;
-}
-
-.arrow-btn-container{
-    display: none;
-}
-.btnSlide-menu{
-    display: inline;
-    
-}
-
-/* 
-===========================
-
-   4. Typography Classes
-
-===========================
-*/
-
-
-.image-container__h1{
-    position: absolute;
-    padding: 30vh 10vw;
-    bottom: 20vh;
-    font-size: 3vmax;
-    font-family: 'Montserrat', serif;
-    color: white;
-}
-
-.image-container__p{
-    position: absolute;
-    padding: 55vh 10vw;
-    font-size: 1.2rem;
-    font-weight: 300;
-    font-family: 'Montserrat', serif;
-    color: white;
-    text-align: center;
-}
+    .nav__list a{
+        opacity: 0;
+        text-align: center;
+    }
 
 
 
+    .btn-list-1:hover{
+        background-color: #B28659;
+    }
 
-/* 
-======================
+    .nav__list a {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+    }
 
-   4. Image Classes
+    .arrow-btn-container{
+        display: none;
+    }
+    .btnSlide-menu{
+        display: inline;
+        
+    }
 
-======================
-*/
+    /* 
+    ===========================
+
+    4. Typography Classes
+
+    ===========================
+    */
+
+
+    .image-container__h1{
+        position: absolute;
+        padding: 30vh 10vw;
+        bottom: 20vh;
+        font-size: 3vmax;
+        font-family: 'Montserrat', serif;
+        color: white;
+    }
+
+    .image-container__p{
+        position: absolute;
+        padding: 55vh 10vw;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: 'Montserrat', serif;
+        color: white;
+        text-align: center;
+    }
 
 
 
-.slides__img, .div__img{
-    width:100vw;
-    height: 100vh;
-}
 
-.div__img{
-    object-fit: cover;
-    object-position: center;
-    image-resolution: 1000px;
-    width: 100vw;
-    height: 100vh;
-}
+    /* 
+    ======================
 
-.slides{
-    margin-bottom: 1rem;
+    4. Image Classes
 
-}
+    ======================
+    */
+
+
+
+    .slides__img{
+        width:100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        image-resolution: 1000px;
+    }
+
+    .div__img{
+        object-fit: cover;
+        object-position: center;
+        image-resolution: 1000px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .slides{
+        margin-bottom: 1rem;
+
+    }
 
 
 }
