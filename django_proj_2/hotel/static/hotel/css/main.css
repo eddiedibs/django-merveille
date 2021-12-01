@@ -1,21 +1,32 @@
 
 /* 
-======================
-      Table of
-      Contents
+=====================================================
+                      
+                       Table of
+                       Contents
+
+=====================================================
 
 
 1.  Global Styles
+
 2.  navBar Classes
+    2.1 First navBar Classes
+    2.2 Second navBar Classes
+
 3.  Button Classes 
+    3.1 First navBar Button classes 
+    3.2 Second navBar Button classes 
+
 4.  Image  Classes 
 5.  Typography Classes
-6.  Active Classes
-7.  Media  Screen
+6.  Background Classes
+7.  Active Classes
+8.  Media  Screen
 
 
 
-======================
+=========================================================
 */
 
 
@@ -44,34 +55,24 @@ body{
 
 
 
-.nav {
-    position: fixed;
-    display: flex;
-    z-index: 500;
-    justify-content: space-around;
-    background-color: transparent;
-    border-bottom: 0.2vh solid white;
-    transition-duration: 500ms;
-    align-items: center;
-    width: 90%;
-    left: 5%;
-    min-height: 14vh;
-    font-family: 'Montserrat', serif;
-    font-size: 15px;
-}
-
 
 
 /* 
-======================
+=========================
 
    2. NavBar Classes
 
-======================
+=========================
 */
 
+/* 
+================================
 
- 
+/// 2.1 First navBar Classes ///
+
+================================
+*/
+
 .logo{
     position:absolute;
     top: 5vh;
@@ -81,6 +82,28 @@ body{
 
 }
 
+
+
+.logo_link{
+    z-index: 3;
+
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    justify-content: space-around;
+    background-color: transparent;
+    border-bottom: 0.2vh solid white;
+    transition-duration: 500ms;
+    align-items: center;
+    width: 90%;
+    min-height: 14vh;
+    left: 5%;
+    font-family: 'Montserrat', serif;
+    font-size: 15px;
+}
 
 .nav__list {
     display: flex;
@@ -101,13 +124,64 @@ body{
 
 }
 
+/* 
+=================================
+
+/// 2.2 Second navBar Classes ///
+
+=================================
+*/
+
+
+.nav2 {
+    z-index: 2;
+    position: fixed;
+    display: inline;
+    justify-content: space-around;
+    align-items: center;
+    width: 3%;
+    transition-duration: 500ms;
+    right:0;
+    min-height: 20vh;
+    font-family: 'Montserrat', serif;
+    font-size: 16.3vh;
+}
+
+.nav__list2{
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #2B2B2B;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 500ms;
+    border: none;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+}
+
+.nav__list2 a{
+
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
 .burger {
-    position: relative;
-    left: 82vw;
-    display: none;
+    z-index: 3;
+    position: absolute;
+    position: fixed;
     cursor: pointer;
     transition-duration: 500ms;
+    right: 10%;
+    top:5%;
+    transition: all 0.5s ease;
 }
+
 
 .burger div {
     height: 4px;
@@ -119,6 +193,7 @@ body{
 }
 
 
+
 /* 
 ======================
 
@@ -126,37 +201,6 @@ body{
 
 ======================
 */
-
-.nav__list a{
-    width: 7vw;
-    height: 5vh;
-    border-radius: 5vw;
-    text-align: center;
-    background-color: transparent;
-    transition-duration: 500ms;
-    cursor: pointer;
-
-
-}
-
-.nav__list a{
-    position: relative;
-    top: 0.8vh;
-    font-size: 2vh;
-    line-height: 5vh;
-}
-
-.nav__list a:hover{
-    border: 1.5px solid #ffff;
-
-}
-
-
-.btn-list-1:hover{
-    background-color: #002940;
-}
-
-
 
 .arrow-btn-container{
     cursor:pointer;
@@ -180,27 +224,133 @@ body{
     height: 5vh;
 }
 
+
+
 /* 
-======================
+=======================================
 
-   4. Image Classes
+/// 3.1 First navBar Button classes ///
 
-======================
+=======================================
+*/
+
+.nav__list a{
+    width: 7vw;
+    height: 5vh;
+    border-radius: 5vw;
+    text-align: center;
+    background-color: transparent;
+    transition-duration: 300ms;
+    cursor: pointer;
+
+
+}
+
+.nav__list a{
+    position: relative;
+    top: 0.8vh;
+    font-size: 2vh;
+    line-height: 5vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    width:auto;
+}
+
+
+
+
+.btn-list-1:hover{
+    background-color: #B28659;
+    border: 2px solid white;
+}
+
+
+.btnSlide-menu{
+    display: none;
+}
+
+/* 
+=================================
+
+/// 3.2 Second navBar Button classes ///
+
+=================================
+*/
+
+
+.nav__list2 a{
+    position: relative;
+    font-size: 2vh;
+    padding-top: 15%;
+    padding-right: 60%;  
+    opacity: 0;
+    text-align: center;  
+
+}
+
+
+
+
+.nav__list2 a {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+}
+
+
+.nav__list2 a::before{
+    content: "";
+    position: absolute;
+    left: 2vw;
+    bottom: 3vh;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.25s ease-out;
+
+}
+
+.nav__list2 a:hover::before{
+
+    width: 100%;
+
+}
+
+
+/* 
+==============================
+
+       4. Image Classes
+
+==============================
 */
 
 .image-container{
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .slider{
-    width:100%;
-    margin: auto;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.div__img{
+    width:100vw;
+    height: 100vh;
+    
+}
+
+.slides__img img{
+    width: 100vw;
 }
 
 .slides{
     display: flex;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition-duration: 700ms;
 }
 
@@ -217,24 +367,69 @@ body{
 
 
 
-.img__h1{
+.image-container__h1{
     bottom: 8vh;
     position: absolute;
     padding: 38vh 34vw;
     font-size: 2.6vmax;
     font-family: 'Montserrat', serif;
+    text-align: center;
     color: white;
 }
 
-.img__p{
+.image-container__p{
     position: absolute;
     padding: 55vh 30vw;
-    font-size: 1.2rem;
+    font-size: 1.5vmax;
     font-weight: 300;
     font-family: 'Montserrat', serif;
     color: white;
     text-align: center;
 }
+
+.about-container__div{
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-container__div-h1{
+    display: block;
+    font-weight: 700;
+    margin-top: 0;
+    padding-top: 10%;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', serif;
+    text-align: center;
+    color: #292929;
+}
+
+
+
+/* 
+===========================
+
+   6.  Background Classes
+
+===========================
+*/
+
+
+.about-wrapper{
+    width:100vw;
+    height:100vh;
+}
+
+
+#about-container{
+    display: block;
+    background-color: #f8f8f8;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
 
 /* 
 ================================================================================================
@@ -275,8 +470,9 @@ body{
 */
 
 
-@media screen and (max-width:768px){
-    
+@media screen 
+and (max-width:768px)
+{    
 /* 
 ======================
       Table of
@@ -334,11 +530,12 @@ body{
 
 
     .nav__list{
+        z-index: 4;
         position: absolute;
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: rgba(0,0,0,0.6);
+        background-color: rgba(0, 0, 0, 0.8);
         display: flex;
         flex-direction: column;
         border: none;
@@ -361,14 +558,14 @@ body{
 
 
 
+
+
     .burger{
         display: block;
-        position: absolute;
-        right: 10vw;
+        position: relative;
+        position: fixed;
         transition: all 0.3s ease;
     }
-
-
 
 
 
@@ -381,94 +578,101 @@ body{
 ======================
 */
 
-.nav__list a{
-    position: relative;
-    font-size: 3vh;
-    padding: 12vh;    
+    .nav__list a{
+        position: relative;
+        font-size: 3vh;
+        padding: 5vh 1vw;    
 
-}
+    }
 
-.nav__list a{
-    opacity: 0;
-    text-align: center;
-}
-
-
-
-.btn-list-1:hover{
-    background-color: #002940;
-}
-
-.nav__list a {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    border: none;
-    background-color: transparent;
-}
-
-.arrow-btn-container{
-    display: none;
-}
-
-/* 
-===========================
-
-   4. Typography Classes
-
-===========================
-*/
-
-
-.img__h1{
-    position: absolute;
-    padding: 30vh 10vw;
-    bottom: 20vh;
-    font-size: 3vmax;
-    font-family: 'Montserrat', serif;
-    color: white;
-}
-
-.img__p{
-    position: absolute;
-    padding: 55vh 10vw;
-    font-size: 1.2rem;
-    font-weight: 300;
-    font-family: 'Montserrat', serif;
-    color: white;
-    text-align: center;
-}
+    .nav__list a{
+        opacity: 0;
+        text-align: center;
+    }
 
 
 
+    .btn-list-1:hover{
+        background-color: #B28659;
+    }
 
-/* 
-======================
+    .nav__list a {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+    }
 
-   4. Image Classes
+    .arrow-btn-container{
+        display: none;
+    }
+    .btnSlide-menu{
+        display: inline;
+        
+    }
 
-======================
-*/
+    /* 
+    ===========================
 
+    4. Typography Classes
 
-
-.div__img{
-    width: 1000px;
-    height: 1000px;
-}
-
-.div__img4{
-    width: 100vw;
-    height: 50vh;
-}
-
-
-.div__img5{
-    width: 100vw;
-    height: 50vh;
-}
+    ===========================
+    */
 
 
+    .image-container__h1{
+        position: absolute;
+        padding: 30vh 10vw;
+        bottom: 20vh;
+        font-size: 1.5rem;   
+        font-family: 'Montserrat', serif;
+        color: white;
+    }
+
+    .image-container__p{
+        position: absolute;
+        padding: 55vh 10vw;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: 'Montserrat', serif;
+        color: white;
+        text-align: center;
+    }
+
+
+
+
+    /* 
+    ======================
+
+    4. Image Classes
+
+    ======================
+    */
+
+
+
+    .slides__img img{
+        width:100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        image-resolution: 1000px;
+    }
+
+    .div__img{
+        object-fit: cover;
+        object-position: center;
+        image-resolution: 1000px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .slides{
+        margin-bottom: 1rem;
+
+    }
 
 
 }
@@ -499,6 +703,15 @@ body{
 ======================
 */
 
+.nav__list2-active a::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #ffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 
 .nav-background-active{
     background-color: #2B2B2B;
@@ -508,14 +721,21 @@ body{
 }
 
 
-.transparentNavbar-active{
-    background-color: transparent;
-}
-
 .nav-active {
     transform: translateX(0%);
 }
 
+.nav-active2 {
+    width: 70%;
+}
+
+.burgerMotion{
+    transform: translateX(100%);
+}
+
+.nav2TotalWidth{
+    width: 30%;
+}
 
 
 @keyframes navFadeLists{

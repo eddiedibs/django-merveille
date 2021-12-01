@@ -1,5 +1,37 @@
+/*
+==================================================================================
 
-//Function that shows a slidable menu for mobile devices
+
+                          Table of Contents
+
+
+1. navMotion: Function that shows a slidable menu for mobile devices.
+
+2. navMotion2: Function that shows a slidable menu for PC.
+
+3. navChangeColor: Function that turns navBar visible when scrolled (Mobile Devices).
+
+4. navChangeColor2: Function that turns navBar visible when scrolled (PC).
+
+5. arrowMotion: Function that allows arrows in main page to slide among images (PC).
+
+6. mainApp: Function that activates all of them in one main function.
+
+
+=================================================================================
+*/
+
+
+/*
+===============================================================
+                        1. navMotion 
+
+    Function that shows a slidable menu for mobile devices
+
+
+===============================================================
+*/
+
 
 const navMotion = () => {
     const burger = document.querySelector('.burger');
@@ -13,7 +45,7 @@ const navMotion = () => {
                 link.style.animation = ''
             }
             else {
-                link.style.animation = `navFadeLists 1.5s ease forwards ${index / 2.5}s`;
+                link.style.animation = `navFadeLists 0.5s ease forwards ${index / 5.5}s`;
                 console.log(index);
             }
             
@@ -28,26 +60,85 @@ const navMotion = () => {
 
 };
 
+/*
+===============================================================
+                        2. navMotion2
+
+          Function that shows a slidable menu for PC
+
+
+===============================================================
+*/
+
+
+const navMotion2 = () => {
+    const nav = document.querySelector('.nav');
+    const nav2 = document.querySelector('.nav2');
+    const blueBtn = document.querySelector('.btn-list-1')
+    const burger = document.querySelector('.burger');
+    const navList = document.querySelector('.nav__list2');
+    const lists = document.querySelectorAll('.nav__list2 a');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active2')
+        navList.classList.toggle('nav-active');
+        nav2.classList.toggle('nav2TotalWidth');
+        lists.forEach((link, index) => {
+            if (link.style.animation){
+                link.style.animation = ''
+
+            }
+            else {
+                link.style.animation = `navFadeLists 0.5s ease forwards ${index / 4.5}s`;
+                console.log(index);
+            }
+            
+        });
+
+        burger.classList.toggle('toggle');
+
+        
+
+        
+    });
+    
+
+    
+
+};
 
 
 
 
-//Function that turns navBar visible when scrolled
+/*
+===============================================================
+                        3. navChangeColor 
+
+    Function that turns navBar visible when scrolled (Mobile Devices)
+
+
+===============================================================
+*/
+
 
 function navChangeColor(){
     const navBar = document.querySelector('.nav');
-    const img = document.querySelector('.slides');
+    const body = document.querySelector('body');
+    const burger = document.querySelector('.burger');
+
 
     window.addEventListener('scroll', () => {
-        let contentPosition = img.getBoundingClientRect().top;
+        let contentPosition = body.getBoundingClientRect().top;
         let screenPosition = window.innerHeight;
-        
+    
         if (contentPosition < -41){
             navBar.classList.add('nav-background-active')
+
 
         }
         else {
             navBar.classList.remove('nav-background-active')
+
 
 
         }
@@ -58,7 +149,65 @@ function navChangeColor(){
     
 }
 
-// Function that allows arrows in main page to slide among images
+
+
+/*
+===============================================================
+                        4. navChangeColor2 
+
+    Function that turns navBar visible when scrolled (PC)
+
+
+===============================================================
+*/
+
+
+function navChangeColor2(){
+    const navBar = document.querySelector('.nav');
+    const body = document.querySelector('body');
+    const burger = document.querySelector('.burger');
+
+
+    window.addEventListener('scroll', () => {
+        let contentPosition = body.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight;
+    
+        if (contentPosition < -41){
+            navBar.classList.add('nav-background-active')
+            burger.classList.add('burgerMotion')
+
+
+        }
+        else {
+            navBar.classList.remove('nav-background-active')
+            burger.classList.remove('burgerMotion')
+
+
+
+        }
+
+
+    })
+
+    
+}
+
+
+
+
+
+
+/*
+===============================================================
+                        5. arrowMotion 
+
+    Function that allows arrows in main page to slide among images
+
+
+===============================================================
+*/
+
+
 function arrowMotion(){
     const rightArrow = document.querySelector('.right-arrow');
     const leftArrow = document.querySelector('.left-arrow');
@@ -71,12 +220,13 @@ function arrowMotion(){
         slidesImg[2] = 200%
         
 
+        NOTE: slidesImg is not used in this version
+
     */
 
     // For slide Arrows
     let currentSlide = [0, 100, 200, 300];
 
-    slidesImg[0].classList.add('active');
     rightArrow.addEventListener('click', ()=> {
         goToSlide(currentSlide[1]);
             rightArrow.addEventListener('click', ()=> {
@@ -113,22 +263,50 @@ function arrowMotion(){
 
 
 
-//function that activates all of them in one main function
+/*
+===============================================================
+                        6. mainApp 
 
+    Function that activates all of them in one main function
+
+
+===============================================================
+*/
 function mainApp(){
 
-navMotion();
-navChangeColor();
-arrowMotion();
+    /*Function that checks if the screen is bigger or smaller than 768px.
+    And if it is bigger, it will activate the navMotion function for PC, and if it's not
+    it will activate specific functions for Mobile Devices */
+
+    function navSelector(x) {
+        if (x.matches) { // If media query matches
+            navMotion();
+            navChangeColor();
+            
+        } 
+        else {
+            navMotion2();
+            navChangeColor2();
+
+        }
+    }
+  
+    var x = window.matchMedia("(max-width: 768px)")
+    navSelector(x) // Call listener function at run time
+    x.addListener(navSelector) // Attach listener function on state changes 
+
+
+    
+    //Rest of functions
+    arrowMotion();
+    navChangeColor();
+
 
 }
 mainApp();
 
 
     
-
-
-
 
 
 
