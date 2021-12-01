@@ -20,8 +20,9 @@
 
 4.  Image  Classes 
 5.  Typography Classes
-6.  Active Classes
-7.  Media  Screen
+6.  Background Classes
+7.  Active Classes
+8.  Media  Screen
 
 
 
@@ -140,6 +141,7 @@ body{
     align-items: center;
     width: 3%;
     right:0;
+    transition-duration: 500ms;
     min-height: 20vh;
     font-family: 'Montserrat', serif;
     font-size: 16.3vh;
@@ -156,8 +158,8 @@ body{
     border: none;
     align-items: center;
     width: 100%;
-    transform: translateX(100%);
     transition-duration: 500ms;
+    transform: translateX(100%);
 }
 
 .nav__list2 a{
@@ -385,6 +387,50 @@ body{
     text-align: center;
 }
 
+.about-container__div{
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-container__div-h1{
+    display: block;
+    font-weight: 700;
+    margin-top: 0;
+    padding-top: 10%;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', serif;
+    text-align: center;
+    color: #292929;
+}
+
+z
+
+/* 
+===========================
+
+   6.  Background Classes
+
+===========================
+*/
+
+
+.about-wrapper{
+    width:100vw;
+    height:100vh;
+}
+
+
+#about-container{
+    display: block;
+    background-color: #f8f8f8;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
 /* 
 ================================================================================================
 
@@ -579,7 +625,7 @@ and (max-width:768px)
         position: absolute;
         padding: 30vh 10vw;
         bottom: 20vh;
-        font-size: 3vmax;
+        font-size: 1.5rem;   
         font-family: 'Montserrat', serif;
         color: white;
     }

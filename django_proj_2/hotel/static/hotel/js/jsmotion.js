@@ -9,11 +9,13 @@
 
 2. navMotion2: Function that shows a slidable menu for PC.
 
-3. navChangeColor: Function that turns navBar visible when scrolled.
+3. navChangeColor: Function that turns navBar visible when scrolled (Mobile Devices).
 
-4. arrowMotion: Function that allows arrows in main page to slide among images.
+4. navChangeColor2: Function that turns navBar visible when scrolled (PC).
 
-5. mainApp: Function that activates all of them in one main function.
+5. arrowMotion: Function that allows arrows in main page to slide among images (PC).
+
+6. mainApp: Function that activates all of them in one main function.
 
 
 =================================================================================
@@ -87,7 +89,7 @@ const navMotion2 = () => {
 
             }
             else {
-                link.style.animation = `navFadeLists 0.5s ease forwards ${index / 3.5}s`;
+                link.style.animation = `navFadeLists 0.5s ease forwards ${index / 4.5}s`;
                 console.log(index);
             }
             
@@ -151,7 +153,7 @@ function navChangeColor(){
 
 /*
 ===============================================================
-                        3. navChangeColor2 
+                        4. navChangeColor2 
 
     Function that turns navBar visible when scrolled (PC)
 
@@ -197,7 +199,7 @@ function navChangeColor2(){
 
 /*
 ===============================================================
-                        4. arrowMotion 
+                        5. arrowMotion 
 
     Function that allows arrows in main page to slide among images
 
@@ -263,7 +265,7 @@ function arrowMotion(){
 
 /*
 ===============================================================
-                        5. mainApp 
+                        6. mainApp 
 
     Function that activates all of them in one main function
 
