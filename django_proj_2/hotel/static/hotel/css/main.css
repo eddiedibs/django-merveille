@@ -1,4 +1,3 @@
-
 /* 
 =====================================================
                       
@@ -10,19 +9,21 @@
 
 1.  Global Styles
 
-2.  navBar Classes
+2.  Root Variables
+
+3.  navBar Classes
     2.1 First navBar Classes
     2.2 Second navBar Classes
 
-3.  Button Classes 
+4.  Button Classes 
     3.1 First navBar Button classes 
     3.2 Second navBar Button classes 
 
-4.  Image  Classes 
-5.  Typography Classes
-6.  Background Classes
-7.  Active Classes
-8.  Media  Screen
+5.  Image  Classes 
+6.  Typography Classes
+7.  Background Classes
+8.  Active Classes
+9.  Media  Screen
 
 
 
@@ -49,8 +50,29 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+
+}
+
 body{
     background-color: rgb(46, 46, 46);
+}
+
+/* 
+=========================
+
+   2.  Root Variables
+
+=========================
+*/
+
+:root{
+
+    --ff-mont: 'Montserrat', serif;
+    
+
+
 }
 
 
@@ -60,7 +82,7 @@ body{
 /* 
 =========================
 
-   2. NavBar Classes
+   3. NavBar Classes
 
 =========================
 */
@@ -68,7 +90,7 @@ body{
 /* 
 ================================
 
-/// 2.1 First navBar Classes ///
+/// 3.1 First navBar Classes ///
 
 ================================
 */
@@ -127,7 +149,7 @@ body{
 /* 
 =================================
 
-/// 2.2 Second navBar Classes ///
+/// 3.2 Second navBar Classes ///
 
 =================================
 */
@@ -197,7 +219,7 @@ body{
 /* 
 ======================
 
-  3. Button Classes
+  4. Button Classes
 
 ======================
 */
@@ -229,7 +251,7 @@ body{
 /* 
 =======================================
 
-/// 3.1 First navBar Button classes ///
+/// 4.1 First navBar Button classes ///
 
 =======================================
 */
@@ -272,7 +294,7 @@ body{
 /* 
 =================================
 
-/// 3.2 Second navBar Button classes ///
+/// 4.2 Second navBar Button classes ///
 
 =================================
 */
@@ -321,7 +343,7 @@ body{
 /* 
 ==============================
 
-       4. Image Classes
+       5. Image Classes
 
 ==============================
 */
@@ -354,12 +376,22 @@ body{
     transition-duration: 700ms;
 }
 
+.about-slider{
+    position: relative;
+}
 
+.about-slide img{
+    position: absolute;
+    display: block;
+    bottom: -20%;
+    max-height: 54vh;
+    max-width: 30vw;
+}
 
 /* 
 ===========================
 
-   5. Typography Classes
+   6. Typography Classes
 
 ===========================
 */
@@ -372,7 +404,7 @@ body{
     position: absolute;
     padding: 38vh 34vw;
     font-size: 2.6vmax;
-    font-family: 'Montserrat', serif;
+    font-family: var(--ff-mont);
     text-align: center;
     color: white;
 }
@@ -382,7 +414,7 @@ body{
     padding: 55vh 30vw;
     font-size: 1.5vmax;
     font-weight: 300;
-    font-family: 'Montserrat', serif;
+    font-family: var(--ff-mont);
     color: white;
     text-align: center;
 }
@@ -397,19 +429,34 @@ body{
     display: block;
     font-weight: 700;
     margin-top: 0;
-    padding-top: 10%;
-    font-size: 2.5rem;
-    font-family: 'Montserrat', serif;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 3vmax;
+    font-family: var(--ff-mont);
     text-align: center;
     color: #292929;
 }
 
+.about-container-text p {
+    font-family: var(--ff-mont);
+    font-size: 1.4vmax;
+    font-weight: 400;
+    word-spacing: 3px;
+    display: inline-block;
+    bottom: 0;
+}
+
+.about-list{
+    font-family: var(--ff-mont);
+    display: block;
+    list-style: none;
+}
 
 
 /* 
 ===========================
 
-   6.  Background Classes
+   7.  Wrapper Classes
 
 ===========================
 */
@@ -430,11 +477,49 @@ body{
 
 
 
+.about-container-text, .about-container-text-list{
+    position: relative;
+    padding-top: 5%;
+
+}
+
+.about-container-text-wrapper{
+    position: relative;
+    right: 10%;
+    display: flex;
+    margin: 0 20%;
+    justify-content: center;
+}
+
+.about-container-text, .about-slider{
+    margin: 5% 10%;
+}
+
+.about-container-text-list{
+    width: 100%
+}
+
+
+.about-list li{
+    padding: 2vh 0;
+    font-size: 1.2vmax;
+}
+
+.about-line{
+    position: absolute;
+    display: block;
+    left: 60%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+}
 
 /* 
 ================================================================================================
 
-                                       6. Media Screen
+                                       8. Media Screen
 
 =================================================================================================
 */
@@ -515,7 +600,7 @@ and (max-width:768px)
         width: 100%;
         left: 0;
         min-height: 20vh;
-        font-family: 'Montserrat', serif;
+        font-family: var(--ff-mont);
         font-size: 16.3vh;
     }
     
@@ -626,7 +711,7 @@ and (max-width:768px)
         padding: 30vh 10vw;
         bottom: 20vh;
         font-size: 1.5rem;   
-        font-family: 'Montserrat', serif;
+        font-family: var(--ff-mont);
         color: white;
     }
 
@@ -635,7 +720,7 @@ and (max-width:768px)
         padding: 55vh 10vw;
         font-size: 1.2rem;
         font-weight: 300;
-        font-family: 'Montserrat', serif;
+        font-family: var(--ff-mont);
         color: white;
         text-align: center;
     }
@@ -646,7 +731,7 @@ and (max-width:768px)
     /* 
     ======================
 
-    4. Image Classes
+    5. Image Classes
 
     ======================
     */
@@ -698,7 +783,7 @@ and (max-width:768px)
 /* 
 ======================
 
-5. Active Classes
+9. Active Classes
 
 ======================
 */
