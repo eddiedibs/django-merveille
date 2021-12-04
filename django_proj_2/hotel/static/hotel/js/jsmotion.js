@@ -215,12 +215,15 @@ function arrowMotion(){
     const slidesImg = document.querySelectorAll('.slides__img')
 
     /*
+           [DEPRECATED]
+
+        NOTE: slidesImg is not used in this version
+
         slidesImg[0] = 0
         slidesImg[1] = 100%
         slidesImg[2] = 200%
         
 
-        NOTE: slidesImg is not used in this version
 
     */
 
@@ -261,6 +264,53 @@ function arrowMotion(){
 }
 
 
+/*
+=====================================================================
+                        6. arrowMotion2 
+
+    Function that allows arrows in about page to slide among images
+                        MADE WITH JQUERY
+
+
+=====================================================================
+*/
+function arrowMotion2(){
+
+    $('.right-arrow-beige').on('click', function(){
+        var currentImg = $('.active');
+        var nextImg = currentImg.next();
+
+        if(nextImg.length){
+            currentImg.removeClass('active').css('z-index', -1);
+            nextImg.addClass('active').css('z-index', 1);
+        }
+
+
+
+    })
+
+    $('.left-arrow-beige').on('click', function(){
+        var currentImg = $('.active');
+        var prevImg = currentImg.prev();
+
+        if(prevImg.length){
+            currentImg.removeClass('active').css('z-index', -1);
+            prevImg.addClass('active').css('z-index', 1);
+        }
+
+
+
+    })  
+
+
+
+}
+
+
+
+
+
+
 
 
 /*
@@ -299,6 +349,7 @@ function mainApp(){
     
     //Rest of functions
     arrowMotion();
+    arrowMotion2();
     navChangeColor();
 
 

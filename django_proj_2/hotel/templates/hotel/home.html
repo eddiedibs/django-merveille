@@ -54,6 +54,11 @@
                             hotel.
                         </p>
                     </div>
+                    <div class='about-icons'>
+                        <img src="{% static 'hotel/icons/Wifi.svg'%}" alt="">
+                        <img src="{% static 'hotel/icons/Horario.svg'%}" alt="">
+                        <img src="{% static 'hotel/icons/Estacionamiento.svg'%}" alt="">
+                    </div>
                     <div class='about-container-text-list'>
                         <ul class='about-list'>
                             <li>Free wifi in the whole building</li>
@@ -62,30 +67,23 @@
                         </ul>
                     </div>
                     <div class='about-line'></div>
-                    <div class='arrow-beige-btn-container'>
-                        <img class='right-arrow' src="{% static 'hotel/icons/Right_beige.svg' %}" alt="">
-                        <img class='left-arrow' src="{% static 'hotel/icons/Left_beige.svg' %}" alt="">
-                    </div>
+                    
                     <div class='about-slider'>
+                        <div class='arrow-beige-btn-container'>
+                            <img class='right-arrow-beige' src="{% static 'hotel/icons/Right_beige.svg' %}" alt="">
+                            <img class='left-arrow-beige'  src="{% static 'hotel/icons/Left_beige.svg' %}" alt="">
+                        </div>
                         <div class='about-slide'>
                             <div class='about-slide__img'>
-                                <img src="{% static 'hotel/images/imagesAbout/imag1.png' %}" alt="">
-                            </div>
+                                <img src="{% static 'hotel/images/imagesAbout/imag1.png' %}" class='active' alt="">
 
-                            <div class='about-slide__img'>
                                 <img src="{% static 'hotel/images/imagesAbout/imag2.png' %}" alt="">
-                            </div>
 
-                            <div class='about-slide__img'>
                                 <img src="{% static 'hotel/images/imagesAbout/imag3.png' %}" alt="">
-                            </div>
 
-                            <div class='about-slide__img'>
                                 <img src="{% static 'hotel/images/imagesAbout/imag4.png' %}" alt="">
-                            </div>
-
-                            <div class='about-slide__img'>
-                                <img src="{% static 'hotel/images/imagesAbout/imag5.png' %}" alt="">
+                                
+                                <img src="{% static 'hotel/images/imagesAbout/imag5.png' %}" class ='lastImg' alt="">
                             </div>
                         </div>
                     </div>

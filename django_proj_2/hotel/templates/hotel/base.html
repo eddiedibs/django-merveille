@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@500&display=swap" rel="stylesheet">
 
 
 
@@ -31,7 +32,7 @@
             <ul class='nav__list'>
                 
                 <a class='btn-list-1' href="{% url 'hotel-booknow' %}">Book now</a>
-                <a class='btnSlide-menu' href="#">About</a>
+                <a class='btnSlide-menu' href="#about-container">About</a>
                 <a class='btnSlide-menu' href="#">Gallery</a>
                 <a class='btnSlide-menu' href="#">Gift Cards</a>
                 <a class='btnSlide-menu' href="#">Services</a>
@@ -49,7 +50,7 @@
         </div>
         <nav class='nav2'>
             <ul class='nav__list2'>
-                <a href="#about-wrapper">About</a>
+                <a href="#about-container">About</a>
                 <a href="#">Gallery</a>
                 <a href="#">Gift Cards</a>
                 <a href="#">Services</a>
@@ -66,6 +67,11 @@
     <div>
         {% block content %} {% endblock %}
     </div>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
     <script src="{% static 'hotel/js/jsmotion.js' %}"></script>
+    
 </body>
 </html>

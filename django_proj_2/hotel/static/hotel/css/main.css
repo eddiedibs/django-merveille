@@ -16,12 +16,24 @@
     2.2 Second navBar Classes
 
 4.  Button Classes 
-    3.1 First navBar Button classes 
-    3.2 Second navBar Button classes 
+    4.1 Arrow Button Classes
+    4.2 First navBar Button classes 
+    4.3 Second navBar Button classes 
 
 5.  Image  Classes 
+    5.1 icon Classes
+
+
+
 6.  Typography Classes
-7.  Background Classes
+    6.1 Home Page Section
+    6.2 About Section
+
+
+7.  Wrapper Classes
+    7.1  Wrapper About Classes
+
+
 8.  Active Classes
 9.  Media  Screen
 
@@ -114,7 +126,7 @@ body{
 .nav {
     position: fixed;
     display: flex;
-    z-index: 1;
+    z-index: 2;
     justify-content: space-around;
     background-color: transparent;
     border-bottom: 0.2vh solid white;
@@ -224,6 +236,16 @@ body{
 ======================
 */
 
+
+/* 
+==================================
+
+/// 4.1 Arrow Button Classes ///
+
+==================================
+*/
+
+
 .arrow-btn-container{
     cursor:pointer;
     
@@ -248,10 +270,36 @@ body{
 
 
 
+
+.arrow-beige-btn-container{
+    cursor:pointer;
+}
+
+.left-arrow-beige{
+    position: absolute;
+    left: -5vw;
+    top: 8vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+
+.right-arrow-beige{
+    position: absolute;
+    left: 22.5vw;
+    top: 8vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+
+
+
+
 /* 
 =======================================
 
-/// 4.1 First navBar Button classes ///
+/// 4.2 First navBar Button classes ///
 
 =======================================
 */
@@ -292,11 +340,11 @@ body{
 }
 
 /* 
-=================================
+==============================================
 
-/// 4.2 Second navBar Button classes ///
+/// 4.3 Second navBar Button classes ///
 
-=================================
+==============================================
 */
 
 
@@ -380,12 +428,39 @@ body{
     position: relative;
 }
 
-.about-slide img{
+
+
+.about-slide__img img{
+    display: none;
     position: absolute;
-    display: block;
-    bottom: -20%;
-    max-height: 54vh;
-    max-width: 30vw;
+    bottom: -10%;
+    width: 20.5vw;
+    height: 58vh;
+}
+
+
+.about-slide__img img.active{
+    display: inline-block;
+}
+
+
+
+/* 
+==========================
+
+/// 5.1 Icon classes ///
+
+==========================
+*/
+
+.about-icons{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-right: 1vw;
+    gap: 8vh;
+    width: 35vw;
+    height: 45vh;
 }
 
 /* 
@@ -396,7 +471,13 @@ body{
 ===========================
 */
 
+/* 
+================================
 
+/// 6.1 Home Page Section ///
+
+================================
+*/
 
 
 .image-container__h1{
@@ -418,6 +499,16 @@ body{
     color: white;
     text-align: center;
 }
+
+/* 
+================================
+
+/// 6.2 About Section ///
+
+================================
+*/
+
+
 
 .about-container__div{
     width: 100%;
@@ -448,6 +539,8 @@ body{
 
 .about-list{
     font-family: var(--ff-mont);
+    font-style: italic;
+    font-weight: 500;
     display: block;
     list-style: none;
 }
@@ -460,6 +553,19 @@ body{
 
 ===========================
 */
+
+
+
+/* 
+======================================
+
+/// 7.1  Wrapper About Classes ///
+
+======================================
+*/
+
+
+
 
 
 .about-wrapper{
@@ -511,7 +617,7 @@ body{
     left: 60%;
     top: 0;
     height: 100%;
-    width: 1px;
+    width: 0.1vw;
     border-radius: 3px;
     background-color: rgb(0, 0, 0);
 }
@@ -567,8 +673,19 @@ and (max-width:768px)
 1.  Global Styles
 2.  navBar Classes
 3.  Button Classes
-4. Typography Classes
-5.  Image Classes
+    3.1 Arrow Button Classes
+
+
+4.  Image  Classes 
+    4.1 icon Classes
+
+
+5.  Typography Classes
+    5.1 Home Page Section
+    5.2 About Section
+
+6.  Wrapper Classes
+    6.1  Wrapper About Classes
 
 
 ======================
@@ -594,6 +711,7 @@ and (max-width:768px)
 
     .nav {
         position: fixed;
+        z-index: 4;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -658,7 +776,7 @@ and (max-width:768px)
 /* 
 ======================
 
-  2. Button Classes
+  3. Button Classes
 
 ======================
 */
@@ -697,33 +815,33 @@ and (max-width:768px)
         
     }
 
-    /* 
-    ===========================
+        
 
-    4. Typography Classes
-
-    ===========================
-    */
-
-
-    .image-container__h1{
-        position: absolute;
-        padding: 30vh 10vw;
-        bottom: 20vh;
-        font-size: 1.5rem;   
-        font-family: var(--ff-mont);
-        color: white;
+    .arrow-beige-btn-container{
+        cursor:pointer;
     }
 
-    .image-container__p{
+    .left-arrow-beige{
+        z-index: 2;
+        background-color: rgba(44, 44, 44, 0.582);
         position: absolute;
-        padding: 55vh 10vw;
-        font-size: 1.2rem;
-        font-weight: 300;
-        font-family: var(--ff-mont);
-        color: white;
-        text-align: center;
+        left:-40vw;
+        top: 30vh;
+        width: 10vw;
+        height: 20vh;
     }
+
+
+    .right-arrow-beige{
+        z-index: 2;
+        background-color: rgba(44, 44, 44, 0.582);
+        position: absolute;
+        left: 50vw;
+        top: 30vh;
+        width: 10vw;
+        height: 20vh;
+}
+    
 
 
 
@@ -731,7 +849,7 @@ and (max-width:768px)
     /* 
     ======================
 
-    5. Image Classes
+    4. Image Classes
 
     ======================
     */
@@ -758,6 +876,209 @@ and (max-width:768px)
         margin-bottom: 1rem;
 
     }
+
+
+    .about-slider{
+        position: relative;
+    }
+    
+    
+    
+    .about-slide__img img{
+        display: none;
+        position: absolute;
+        top:50%;
+        right: -60vw;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    
+    .about-slide__img img.active{
+        display: inline-block;
+    }
+    
+
+
+
+
+/* 
+==========================
+
+/// 4.1 Icon classes ///
+
+==========================
+*/
+
+    .about-icons{
+        display: none;
+        flex-direction: column;
+        padding-top: 10vh;
+        padding-right: 1vw;
+        gap: 8vh;
+        width: 35vw;
+        height: 45vh;
+    }
+
+
+/* 
+===========================
+
+5. Typography Classes
+
+===========================
+*/
+
+/* 
+================================
+
+/// 5.1 Home Page Section ///
+
+================================
+*/
+
+
+    .image-container__h1{
+        position: absolute;
+        padding: 30vh 10vw;
+        bottom: 20vh;
+        font-size: 1.5rem;   
+        font-family: var(--ff-mont);
+        color: white;
+    }
+
+    .image-container__p{
+        position: none;
+        padding: 55vh 10vw;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: var(--ff-mont);
+        color: white;
+        text-align: center;
+    }
+
+
+/* 
+================================
+
+/// 5.2 About Section ///
+
+================================
+*/
+
+
+    .about-container__div{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .about-container__div-h1{
+        display: block;
+        font-weight: 700;
+        margin-top: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 3vmax;
+        font-family: var(--ff-mont);
+        text-align: center;
+        color: #292929;
+    }
+    
+    .about-container-text p {
+        font-family: var(--ff-mont);
+        font-size: 1.4vmax;
+        font-weight: 400;
+        word-spacing: 3px;
+        display: none;
+        bottom: 0;
+    }
+    
+    .about-list{
+        font-family: var(--ff-mont);
+        font-style: italic;
+        font-weight: 500;
+        display: none;
+        list-style: none;
+    }
+
+
+
+/* 
+===========================
+
+   6.  Wrapper Classes
+
+===========================
+*/
+
+
+
+/* 
+======================================
+
+/// 6.1  Wrapper About Classes ///
+
+======================================
+*/
+
+
+
+
+
+    .about-wrapper{
+        width:100vw;
+        height:100vh;
+    }
+
+
+    #about-container{
+        display: block;
+        background-color: #f8f8f8;
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+
+    .about-container-text, .about-container-text-list{
+        display: none;
+        position: relative;
+        padding-top: 5%;
+
+    }
+
+    .about-container-text-wrapper{
+        position: relative;
+        right: 10%;
+        display: flex;
+        margin: 0 20%;
+        justify-content: center;
+    }
+
+    .about-container-text, .about-slider{
+    }
+
+    .about-container-text-list{
+        width: 100%
+    }
+
+
+    .about-list li{
+        display: none;
+        padding: 2vh 0;
+        font-size: 3vmax;
+    }
+
+    .about-line{
+        display: none;
+    }
+
+
+
+
+
+
 
 
 }
@@ -856,4 +1177,9 @@ and (max-width:768px)
     transform: rotate(45deg) translate(-6px, -8px);
 
 }
+
+
+
+
+
 
