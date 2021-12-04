@@ -275,15 +275,23 @@ function arrowMotion(){
 =====================================================================
 */
 function arrowMotion2(){
+    const firstImg = $('[firstImg]');
+    const lastImg = $('[lastImg]')
 
     $('.right-arrow-beige').on('click', function(){
         var currentImg = $('.active');
         var nextImg = currentImg.next();
 
-        if(nextImg.length){
+        if(nextImg.length != 0){
             currentImg.removeClass('active').css('z-index', -1);
             nextImg.addClass('active').css('z-index', 1);
         }
+
+        else{
+            currentImg.removeClass('active').css('z-index', -1);
+            firstImg.addClass('active').css('z-index', 1);
+        }
+
 
 
 
@@ -292,12 +300,17 @@ function arrowMotion2(){
     $('.left-arrow-beige').on('click', function(){
         var currentImg = $('.active');
         var prevImg = currentImg.prev();
+        console.log(prevImg.length)
 
-        if(prevImg.length){
+        if(prevImg.length != 0){
             currentImg.removeClass('active').css('z-index', -1);
             prevImg.addClass('active').css('z-index', 1);
         }
 
+        else{
+            currentImg.removeClass('active').css('z-index', -1);
+            lastImg.addClass('active').css('z-index', 1);
+        }
 
 
     })  
@@ -305,8 +318,6 @@ function arrowMotion2(){
 
 
 }
-
-
 
 
 
@@ -323,7 +334,6 @@ function arrowMotion2(){
 ===============================================================
 */
 function mainApp(){
-
     /*Function that checks if the screen is bigger or smaller than 768px.
     And if it is bigger, it will activate the navMotion function for PC, and if it's not
     it will activate specific functions for Mobile Devices */
@@ -340,10 +350,12 @@ function mainApp(){
 
         }
     }
-  
+
     var x = window.matchMedia("(max-width: 768px)")
     navSelector(x) // Call listener function at run time
-    x.addListener(navSelector) // Attach listener function on state changes 
+
+
+
 
 
     
