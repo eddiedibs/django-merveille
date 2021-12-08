@@ -1,4 +1,3 @@
-
 /* 
 =====================================================
                       
@@ -10,19 +9,33 @@
 
 1.  Global Styles
 
-2.  navBar Classes
+2.  Root Variables
+
+3.  navBar Classes
     2.1 First navBar Classes
     2.2 Second navBar Classes
 
-3.  Button Classes 
-    3.1 First navBar Button classes 
-    3.2 Second navBar Button classes 
+4.  Button Classes 
+    4.1 Arrow Button Classes
+    4.2 First navBar Button classes 
+    4.3 Second navBar Button classes 
 
-4.  Image  Classes 
-5.  Typography Classes
-6.  Background Classes
-7.  Active Classes
-8.  Media  Screen
+5.  Image  Classes 
+    5.1 icon Classes
+
+
+
+6.  Typography Classes
+    6.1 Home Page Section
+    6.2 About Section
+
+
+7.  Wrapper Classes
+    7.1  Wrapper About Classes
+
+
+8.  Active Classes
+9.  Media  Screen
 
 
 
@@ -49,8 +62,29 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+
+}
+
 body{
     background-color: rgb(46, 46, 46);
+}
+
+/* 
+=========================
+
+   2.  Root Variables
+
+=========================
+*/
+
+:root{
+
+    --ff-mont: 'Montserrat', serif;
+    
+
+
 }
 
 
@@ -60,7 +94,7 @@ body{
 /* 
 =========================
 
-   2. NavBar Classes
+   3. NavBar Classes
 
 =========================
 */
@@ -68,7 +102,7 @@ body{
 /* 
 ================================
 
-/// 2.1 First navBar Classes ///
+/// 3.1 First navBar Classes ///
 
 ================================
 */
@@ -92,7 +126,7 @@ body{
 .nav {
     position: fixed;
     display: flex;
-    z-index: 1;
+    z-index: 2;
     justify-content: space-around;
     background-color: transparent;
     border-bottom: 0.2vh solid white;
@@ -127,7 +161,7 @@ body{
 /* 
 =================================
 
-/// 2.2 Second navBar Classes ///
+/// 3.2 Second navBar Classes ///
 
 =================================
 */
@@ -177,8 +211,8 @@ body{
     position: fixed;
     cursor: pointer;
     transition-duration: 500ms;
-    right: 10%;
-    top:5%;
+    right: 10vw;
+    top:5vh;
     transition: all 0.5s ease;
 }
 
@@ -197,10 +231,20 @@ body{
 /* 
 ======================
 
-  3. Button Classes
+  4. Button Classes
 
 ======================
 */
+
+
+/* 
+==================================
+
+/// 4.1 Arrow Button Classes ///
+
+==================================
+*/
+
 
 .arrow-btn-container{
     cursor:pointer;
@@ -226,10 +270,36 @@ body{
 
 
 
+
+.arrow-beige-btn-container{
+    cursor:pointer;
+}
+
+.left-arrow-beige{
+    position: absolute;
+    left: -5vw;
+    top: 8vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+
+.right-arrow-beige{
+    position: absolute;
+    left: 22.5vw;
+    top: 8vmax;
+    width: 3vw;
+    height: 5vh;
+}
+
+
+
+
+
 /* 
 =======================================
 
-/// 3.1 First navBar Button classes ///
+/// 4.2 First navBar Button classes ///
 
 =======================================
 */
@@ -270,11 +340,11 @@ body{
 }
 
 /* 
-=================================
+==============================================
 
-/// 3.2 Second navBar Button classes ///
+/// 4.3 Second navBar Button classes ///
 
-=================================
+==============================================
 */
 
 
@@ -321,7 +391,7 @@ body{
 /* 
 ==============================
 
-       4. Image Classes
+       5. Image Classes
 
 ==============================
 */
@@ -354,17 +424,61 @@ body{
     transition-duration: 700ms;
 }
 
+.about-slider{
+    position: relative;
+}
 
+
+
+.about-slide__img img{
+    display: none;
+    transition-duration: 200ms;
+    position: absolute;
+    bottom: -10%;
+    width: 20.5vw;
+    height: 58vh;
+}
+
+
+.about-slide__img img.active{
+    display: inline-block;
+}
+
+
+
+/* 
+==========================
+
+/// 5.1 Icon classes ///
+
+==========================
+*/
+
+.about-icons{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-right: 1vw;
+    gap: 8vh;
+    width: 35vw;
+    height: 45vh;
+}
 
 /* 
 ===========================
 
-   5. Typography Classes
+   6. Typography Classes
 
 ===========================
 */
 
+/* 
+================================
 
+/// 6.1 Home Page Section ///
+
+================================
+*/
 
 
 .image-container__h1{
@@ -372,7 +486,7 @@ body{
     position: absolute;
     padding: 38vh 34vw;
     font-size: 2.6vmax;
-    font-family: 'Montserrat', serif;
+    font-family: var(--ff-mont);
     text-align: center;
     color: white;
 }
@@ -382,10 +496,20 @@ body{
     padding: 55vh 30vw;
     font-size: 1.5vmax;
     font-weight: 300;
-    font-family: 'Montserrat', serif;
+    font-family: var(--ff-mont);
     color: white;
     text-align: center;
 }
+
+/* 
+================================
+
+/// 6.2 About Section ///
+
+================================
+*/
+
+
 
 .about-container__div{
     width: 100%;
@@ -397,22 +521,52 @@ body{
     display: block;
     font-weight: 700;
     margin-top: 0;
-    padding-top: 10%;
-    font-size: 2.5rem;
-    font-family: 'Montserrat', serif;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 3vmax;
+    font-family: var(--ff-mont);
     text-align: center;
     color: #292929;
 }
 
+.about-container-text p {
+    font-family: var(--ff-mont);
+    font-size: 1.4vmax;
+    font-weight: 400;
+    word-spacing: 3px;
+    display: inline-block;
+    bottom: 0;
+}
+
+.about-list{
+    font-family: var(--ff-mont);
+    font-style: italic;
+    font-weight: 500;
+    display: block;
+    list-style: none;
+}
 
 
 /* 
 ===========================
 
-   6.  Background Classes
+   7.  Wrapper Classes
 
 ===========================
 */
+
+
+
+/* 
+======================================
+
+/// 7.1  Wrapper About Classes ///
+
+======================================
+*/
+
+
+
 
 
 .about-wrapper{
@@ -430,11 +584,49 @@ body{
 
 
 
+.about-container-text, .about-container-text-list{
+    position: relative;
+    padding-top: 5%;
+
+}
+
+.about-container-text-wrapper{
+    position: relative;
+    right: 10%;
+    display: flex;
+    margin: 0 20%;
+    justify-content: center;
+}
+
+.about-container-text, .about-slider{
+    margin: 5% 10%;
+}
+
+.about-container-text-list{
+    width: 100%
+}
+
+
+.about-list li{
+    padding: 2vh 0;
+    font-size: 1.2vmax;
+}
+
+.about-line{
+    position: absolute;
+    display: block;
+    left: 60%;
+    top: 0;
+    height: 100%;
+    width: 0.1vw;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+}
 
 /* 
 ================================================================================================
 
-                                       6. Media Screen
+                                       8. Media Screen
 
 =================================================================================================
 */
@@ -482,8 +674,19 @@ and (max-width:768px)
 1.  Global Styles
 2.  navBar Classes
 3.  Button Classes
-4. Typography Classes
-5.  Image Classes
+    3.1 Arrow Button Classes
+
+
+4.  Image  Classes 
+    4.1 icon Classes
+
+
+5.  Typography Classes
+    5.1 Home Page Section
+    5.2 About Section
+
+6.  Wrapper Classes
+    6.1  Wrapper About Classes
 
 
 ======================
@@ -509,13 +712,14 @@ and (max-width:768px)
 
     .nav {
         position: fixed;
+        z-index: 3;
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
         left: 0;
         min-height: 20vh;
-        font-family: 'Montserrat', serif;
+        font-family: var(--ff-mont);
         font-size: 16.3vh;
     }
     
@@ -530,7 +734,7 @@ and (max-width:768px)
 
 
     .nav__list{
-        z-index: 4;
+        z-index: 3;
         position: absolute;
         right: 0;
         height: 100vh;
@@ -561,8 +765,11 @@ and (max-width:768px)
 
 
     .burger{
+        z-index: 3;
         display: block;
         position: relative;
+        right: 10vw;
+        top:8vh;
         position: fixed;
         transition: all 0.3s ease;
     }
@@ -573,7 +780,7 @@ and (max-width:768px)
 /* 
 ======================
 
-  2. Button Classes
+  3. Button Classes
 
 ======================
 */
@@ -604,6 +811,16 @@ and (max-width:768px)
         background-color: transparent;
     }
 
+
+/* 
+==================================
+
+/// 3.1 Arrow Button Classes ///
+
+==================================
+*/
+
+    
     .arrow-btn-container{
         display: none;
     }
@@ -612,33 +829,33 @@ and (max-width:768px)
         
     }
 
-    /* 
-    ===========================
+        
 
-    4. Typography Classes
-
-    ===========================
-    */
-
-
-    .image-container__h1{
-        position: absolute;
-        padding: 30vh 10vw;
-        bottom: 20vh;
-        font-size: 1.5rem;   
-        font-family: 'Montserrat', serif;
-        color: white;
+    .arrow-beige-btn-container{
+        cursor:pointer;
     }
 
-    .image-container__p{
+    .left-arrow-beige{
+        z-index: 2;
+        background-color: rgba(44, 44, 44, 0.582);
         position: absolute;
-        padding: 55vh 10vw;
-        font-size: 1.2rem;
-        font-weight: 300;
-        font-family: 'Montserrat', serif;
-        color: white;
-        text-align: center;
+        left:-64vw;
+        top: 30vh;
+        width: 10vw;
+        height: 20vh;
     }
+
+
+    .right-arrow-beige{
+        z-index: 2;
+        background-color: rgba(44, 44, 44, 0.582);
+        position: absolute;
+        left: 24vw;
+        top: 30vh;
+        width: 10vw;
+        height: 20vh;
+}
+    
 
 
 
@@ -662,6 +879,7 @@ and (max-width:768px)
     }
 
     .div__img{
+        margin-top: 110px;
         object-fit: cover;
         object-position: center;
         image-resolution: 1000px;
@@ -673,6 +891,208 @@ and (max-width:768px)
         margin-bottom: 1rem;
 
     }
+
+
+    .about-slider{
+        position: relative;
+    }
+    
+    
+    
+    .about-slide__img img{
+        display: none;
+        position: absolute;
+        top:0;
+        right: -35vw;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    
+    .about-slide__img img.active{
+        display: inline-block;
+    }
+    
+
+
+
+
+/* 
+==========================
+
+/// 4.1 Icon classes ///
+
+==========================
+*/
+
+    .about-icons{
+        display: none;
+        flex-direction: column;
+        padding-top: 10vh;
+        padding-right: 1vw;
+        gap: 8vh;
+        width: 35vw;
+        height: 45vh;
+    }
+
+
+/* 
+===========================
+
+5. Typography Classes
+
+===========================
+*/
+
+/* 
+================================
+
+/// 5.1 Home Page Section ///
+
+================================
+*/
+
+
+    .image-container__h1{
+        position: absolute;
+        padding: 30vh 10vw;
+        bottom: 20vh;
+        font-size: 1.5rem;   
+        font-family: var(--ff-mont);
+        color: white;
+    }
+
+    .image-container__p{
+        position: none;
+        padding: 55vh 10vw;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-family: var(--ff-mont);
+        color: white;
+        text-align: center;
+    }
+
+
+/* 
+================================
+
+/// 5.2 About Section ///
+
+================================
+*/
+
+
+    .about-container__div{
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .about-container__div-h1{
+        display: block;
+        font-weight: 700;
+        margin-top: 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 4vmax;
+        font-family: var(--ff-mont);
+        text-align: center;
+        color: #292929;
+    }
+    
+    .about-container-text p {
+        font-family: var(--ff-mont);
+        font-size: 1.4vmax;
+        font-weight: 400;
+        word-spacing: 3px;
+        display: none;
+        bottom: 0;
+    }
+    
+    .about-list{
+        font-family: var(--ff-mont);
+        font-style: italic;
+        font-weight: 500;
+        display: none;
+        list-style: none;
+    }
+
+
+
+/* 
+===========================
+
+   6.  Wrapper Classes
+
+===========================
+*/
+
+
+
+/* 
+======================================
+
+/// 6.1  Wrapper About Classes ///
+
+======================================
+*/
+
+
+
+
+
+    .about-wrapper{
+        width:100vw;
+        height:100vh;
+    }
+
+
+    #about-container{
+        display: block;
+        background-color: #f8f8f8;
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+
+    .about-container-text, .about-container-text-list{
+        position: relative;
+        padding-top: 5%;
+
+    }
+
+    .about-container-text-wrapper{
+        position: relative;
+        right: 10%;
+        display: flex;
+        margin: 0 20%;
+        justify-content: center;
+    }
+
+    .about-container-text, .about-slider{
+    }
+
+    .about-container-text-list{
+        width: 100%
+    }
+
+
+    .about-list li{
+        display: none;
+        padding: 2vh 0;
+        font-size: 3vmax;
+    }
+
+    .about-line{
+        display: none;
+    }
+
+
+
+
+
+
 
 
 }
@@ -698,7 +1118,7 @@ and (max-width:768px)
 /* 
 ======================
 
-5. Active Classes
+9. Active Classes
 
 ======================
 */
@@ -771,4 +1191,9 @@ and (max-width:768px)
     transform: rotate(45deg) translate(-6px, -8px);
 
 }
+
+
+
+
+
 

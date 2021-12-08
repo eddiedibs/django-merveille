@@ -215,12 +215,15 @@ function arrowMotion(){
     const slidesImg = document.querySelectorAll('.slides__img')
 
     /*
+           [DEPRECATED]
+
+        NOTE: slidesImg is not used in this version
+
         slidesImg[0] = 0
         slidesImg[1] = 100%
         slidesImg[2] = 200%
         
 
-        NOTE: slidesImg is not used in this version
 
     */
 
@@ -261,6 +264,64 @@ function arrowMotion(){
 }
 
 
+/*
+=====================================================================
+                        6. arrowMotion2 
+
+    Function that allows arrows in about page to slide among images
+                        MADE WITH JQUERY
+
+
+=====================================================================
+*/
+function arrowMotion2(){
+    const firstImg = $('[firstImg]');
+    const lastImg = $('[lastImg]')
+
+    $('.right-arrow-beige').on('click', function(){
+        var currentImg = $('.active');
+        var nextImg = currentImg.next();
+
+        if(nextImg.length != 0){
+            currentImg.removeClass('active').css('z-index', -1);
+            nextImg.addClass('active').css('z-index', 1);
+        }
+
+        else{
+            currentImg.removeClass('active').css('z-index', -1);
+            firstImg.addClass('active').css('z-index', 1);
+        }
+
+
+
+
+    })
+
+    $('.left-arrow-beige').on('click', function(){
+        var currentImg = $('.active');
+        var prevImg = currentImg.prev();
+        console.log(prevImg.length)
+
+        if(prevImg.length != 0){
+            currentImg.removeClass('active').css('z-index', -1);
+            prevImg.addClass('active').css('z-index', 1);
+        }
+
+        else{
+            currentImg.removeClass('active').css('z-index', -1);
+            lastImg.addClass('active').css('z-index', 1);
+        }
+
+
+    })  
+
+
+
+}
+
+
+
+
 
 
 /*
@@ -273,7 +334,6 @@ function arrowMotion(){
 ===============================================================
 */
 function mainApp(){
-
     /*Function that checks if the screen is bigger or smaller than 768px.
     And if it is bigger, it will activate the navMotion function for PC, and if it's not
     it will activate specific functions for Mobile Devices */
@@ -290,15 +350,18 @@ function mainApp(){
 
         }
     }
-  
+
     var x = window.matchMedia("(max-width: 768px)")
     navSelector(x) // Call listener function at run time
-    x.addListener(navSelector) // Attach listener function on state changes 
+
+
+
 
 
     
     //Rest of functions
     arrowMotion();
+    arrowMotion2();
     navChangeColor();
 
 
