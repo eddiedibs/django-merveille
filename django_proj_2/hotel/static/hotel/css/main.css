@@ -879,6 +879,7 @@ and (max-width:768px)
     }
 
     .div__img{
+        margin-top: 110px;
         object-fit: cover;
         object-position: center;
         image-resolution: 1000px;
