@@ -28,10 +28,12 @@
 6.  Typography Classes
     6.1 Home Page Section
     6.2 About Section
+    6.3 Services Section
 
 
 7.  Wrapper Classes
     7.1  Wrapper About Classes
+    7.2 Wrapper Services Classes
 
 
 8.  Active Classes
@@ -546,6 +548,42 @@ body{
     list-style: none;
 }
 
+/* 
+================================
+
+/// 6.3 Services Section ///
+
+================================
+*/
+
+
+
+
+.services-header{
+    position: absolute;
+    padding-top: 5vh;
+    padding-left: 3vw;
+    color: white;
+    font-family: var(--ff-mont);
+    font-size: 2rem;
+    font-style: italic;
+
+
+}
+
+.services-image-container p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 5vh;
+    padding-right: 3vw;
+    color: white;
+    font-family: var(--ff-mont);
+    font-size: 1.3rem;
+}
+
+
+
 
 /* 
 ===========================
@@ -623,6 +661,49 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
+
+/* 
+======================================
+
+/// 7.2  Wrapper Services Classes ///
+
+======================================
+*/
+
+
+#services-container{
+    display: block;
+    background-color: #292929;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.services-container__div{
+    display: flex;
+
+}
+
+.services-container__div img{
+    background-color: #2B2B2B;
+    height: 100%;
+    width: 100%;
+}
+
+.services-image-container{
+    position: relative;
+
+}
+
+
+.services-image-container__div{
+    display: block;
+    position: absolute;
+    background-color: #000000a1;
+    height: 100%;
+    width: 100%;
+}
+
 /* 
 ================================================================================================
 
@@ -662,9 +743,8 @@ body{
 */
 
 
-@media screen 
-and (max-width:768px)
-{    
+@media screen and (max-width:760px){
+
 /* 
 ======================
       Table of
@@ -1019,6 +1099,9 @@ and (max-width:768px)
 
 
 
+
+
+
 /* 
 ===========================
 
@@ -1054,8 +1137,6 @@ and (max-width:768px)
         height: 100vh;
     }
 
-
-
     .about-container-text, .about-container-text-list{
         position: relative;
         padding-top: 5%;
@@ -1089,7 +1170,7 @@ and (max-width:768px)
     }
 
 
-
+    
 
 
 
