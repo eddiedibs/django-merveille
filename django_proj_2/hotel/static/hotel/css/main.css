@@ -698,10 +698,17 @@ body{
 
 .services-image-container__div{
     display: block;
+    cursor: pointer;
     position: absolute;
-    background-color: #000000a1;
+    background-color: #000000b7;
     height: 100%;
     width: 100%;
+    transition-duration: 200ms;
+}
+
+.services-image-container__div:hover{
+    background-color: #0000002a;
+
 }
 
 /* 
