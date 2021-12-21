@@ -698,6 +698,7 @@ body{
 
 .services-image-container__div{
     display: block;
+<<<<<<< HEAD
     cursor: pointer;
     position: absolute;
     background-color: #000000b7;
@@ -709,6 +710,12 @@ body{
 .services-image-container__div:hover{
     background-color: #0000002a;
 
+=======
+    position: absolute;
+    background-color: #000000a1;
+    height: 100%;
+    width: 100%;
+>>>>>>> master
 }
 
 /* 
