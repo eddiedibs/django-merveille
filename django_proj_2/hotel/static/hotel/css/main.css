@@ -448,6 +448,14 @@ body{
 
 
 
+.service-background-image{
+    background-color: #2B2B2B;
+    height: 100%;
+    width: 100%;
+}
+
+
+
 /* 
 ==========================
 
@@ -465,6 +473,22 @@ body{
     width: 35vw;
     height: 45vh;
 }
+
+
+.service-icon{
+    display: block;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    top: 50vh;
+    left: -10%;
+    height: 30vh;
+    width: 40vw;
+    transition-duration: 200ms;
+
+}
+
+
 
 /* 
 ===========================
@@ -563,16 +587,19 @@ body{
     position: absolute;
     padding-top: 5vh;
     padding-left: 3vw;
+    z-index: 1;
     color: white;
     font-family: var(--ff-mont);
     font-size: 2rem;
     font-style: italic;
+    transition-duration: 300ms;
 
 
 }
 
 .services-image-container p {
     position: absolute;
+    z-index: 1;
     bottom: 0;
     right: 0;
     padding-bottom: 5vh;
@@ -580,6 +607,7 @@ body{
     color: white;
     font-family: var(--ff-mont);
     font-size: 1.3rem;
+    transition-duration: 300ms;
 }
 
 
@@ -684,11 +712,6 @@ body{
 
 }
 
-.services-container__div img{
-    background-color: #2B2B2B;
-    height: 100%;
-    width: 100%;
-}
 
 .services-image-container{
     position: relative;
@@ -698,8 +721,8 @@ body{
 
 .services-image-container__div{
     display: block;
-<<<<<<< HEAD
     cursor: pointer;
+    z-index: 1;
     position: absolute;
     background-color: #000000b7;
     height: 100%;
@@ -710,12 +733,6 @@ body{
 .services-image-container__div:hover{
     background-color: #0000002a;
 
-=======
-    position: absolute;
-    background-color: #000000a1;
-    height: 100%;
-    width: 100%;
->>>>>>> master
 }
 
 /* 
@@ -1288,7 +1305,18 @@ body{
 }
 
 
+.services-header--active{
+    opacity: 0;
 
+}
 
+.service-icon--active{
+    opacity: 1;
 
+}
+
+.service-paragraph--active{
+    opacity: 0;
+
+}
 

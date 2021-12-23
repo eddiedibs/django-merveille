@@ -15,7 +15,11 @@
 
 5. arrowMotion: Function that allows arrows in main page to slide among images (PC).
 
-6. mainApp: Function that activates all of them in one main function.
+6. arrowMotion2: Function that allows arrows in about page to slide among images MADE WITH JQUERY
+
+7. serviceActive: Function that allows service section to disappear typography and to show logo MADE WITH JQUERY
+
+8. mainApp: Function that activates all of them in one main function.
 
 
 =================================================================================
@@ -320,13 +324,83 @@ function arrowMotion2(){
 }
 
 
+/*
+=====================================================================
+                        7. serviceActive 
+
+    Function that allows service section to disappear typography and
+                    to show logo MADE WITH JQUERY
+
+
+=====================================================================
+*/
+
+function serviceActive(){
+    const serviceHeader = document.querySelectorAll('.services-header');
+    const serviceLogo = document.querySelectorAll('.service-icon')
+    const serviceParagraph = document.querySelectorAll('.services-image-container p');
+
+
+    $(".services-image-container__div").eq(0).hover( () => {
+        //activates header opacity to 0
+        serviceHeader[0].classList.add('services-header--active');
+        //activates logo opacity to 1
+        serviceLogo[0].classList.add('service-icon--active');
+        //activates text opacity to 0
+        serviceParagraph[0].classList.add('service-paragraph--active');},
+        () => {
+        //deactivates text opacity to 1
+        serviceHeader[0].classList.remove('services-header--active');
+        //deactivates logo opacity to 0
+        serviceLogo[0].classList.remove('service-icon--active');
+        //deactivates text opacity to 1
+        serviceParagraph[0].classList.remove('service-paragraph--active');}
+    )
+    $(".services-image-container__div").eq(1).hover( () => {
+        serviceHeader[1].classList.add('services-header--active');
+        serviceLogo[1].classList.add('service-icon--active');
+        serviceParagraph[1].classList.add('service-paragraph--active');},
+        () => {
+        serviceHeader[1].classList.remove('services-header--active');
+        serviceLogo[1].classList.remove('service-icon--active');
+        serviceParagraph[1].classList.remove('service-paragraph--active');}
+    )
+    $(".services-image-container__div").eq(2).hover( () => {
+        serviceHeader[2].classList.add('services-header--active');
+        serviceLogo[2].classList.add('service-icon--active');
+        serviceParagraph[2].classList.add('service-paragraph--active');},
+        () => {
+        serviceHeader[2].classList.remove('services-header--active');
+        serviceLogo[2].classList.remove('service-icon--active');
+        serviceParagraph[2].classList.remove('service-paragraph--active');}
+    )
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
 
 /*
 ===============================================================
-                        6. mainApp 
+                        8. mainApp 
 
     Function that activates all of them in one main function
 
@@ -363,6 +437,7 @@ function mainApp(){
     arrowMotion();
     arrowMotion2();
     navChangeColor();
+    serviceActive();
 
 
 }
