@@ -21,7 +21,7 @@
     4.3 Second navBar Button classes 
 
 5.  Image  Classes 
-    5.1 icon Classes
+    5.1 Icon Classes
 
 
 
@@ -29,11 +29,14 @@
     6.1 Home Page Section
     6.2 About Section
     6.3 Services Section
+    6.4 know-info Section
 
 
 7.  Wrapper Classes
     7.1  Wrapper About Classes
     7.2 Wrapper Services Classes
+    7.3  Wrapper Map Classes
+    7.4  Wrapper know-info Classes
 
 
 8.  Active Classes
@@ -459,7 +462,7 @@ body{
 /* 
 ==========================
 
-/// 5.1 Icon classes ///
+/// 5.1 Icon Classes ///
 
 ==========================
 */
@@ -480,7 +483,7 @@ body{
     position: absolute;
     z-index: 0;
     opacity: 0;
-    top: 50vh;
+    top: 40vh;
     left: -10%;
     height: 30vh;
     width: 40vw;
@@ -488,6 +491,13 @@ body{
 
 }
 
+
+.back-top-icon{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 5%;
+}
 
 
 /* 
@@ -611,8 +621,64 @@ body{
 }
 
 
+/* 
+================================
+
+/// 6.4 know-info Section ///
+
+================================
+*/
 
 
+.know-info-header{
+    padding-top: 5%;
+    font-family: var(--ff-mont);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 5%;
+
+
+
+}
+
+.know-info-comment-list{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+}
+
+.know-info-comment-list-container__h6{
+    position: absolute;
+    font-family: var(--ff-mont);
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: white;
+    padding-left: 5%;
+    top: 2vh;
+
+}
+
+.know-info-comment-list-container__li{
+    list-style: none;
+    color: white;
+    font-family: var(--ff-mont);
+    font-size: .8rem;
+    font-weight: 300;
+    word-wrap: break-word;
+    padding: 8% 5% 0% 5%;
+    width: 100%;
+    height: 100%;
+    
+
+}
+.know-info-comment-list-container__p{
+    font-family: var(--ff-mont);
+    font-weight: 300;
+    padding: 3% 5%;
+    color: white;
+    font-size: .7rem;
+
+}
 /* 
 ===========================
 
@@ -734,6 +800,80 @@ body{
     background-color: #0000002a;
 
 }
+
+/* 
+======================================
+
+/// 7.3  Wrapper Map Classes ///
+
+======================================
+*/
+
+
+#map-container{
+    height: 100%;
+    width: 100%;
+
+}
+
+.map-container__div{
+    margin-top: 7%;
+    margin-bottom: -0.3%;
+    height: 100%;
+    width: 100%;
+}
+
+.map-container__iframe{
+    width: 100%;
+    height: 50vh;
+}
+
+
+/* 
+======================================
+
+/// 7.4  Wrapper know-info Classes ///
+
+======================================
+*/
+
+
+
+#know-info-container{
+    background-color: white;
+    height:100vh;
+    width: 100vw;
+
+}
+
+.know-info-container__div{
+    height: 100vh;
+    width: 100vw;
+}
+
+.know-info-container-content{
+    position: relative;
+    display: flex;
+
+}
+
+.know-info-comment-list-container{
+    position: relative;
+    background-color: #032940ff;
+    margin-left: 40%;
+    height: 100%;
+    width: 35vw;
+
+}
+.know-info-comment-list-container:first-child{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.know-info-comment-list-container:last-child{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 
 /* 
 ================================================================================================

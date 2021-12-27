@@ -25,13 +25,14 @@ SECRET_KEY = 'django-insecure-ca^)ak#fgrn#a!=x!tax(^^=dseay@8*-x=ps^+%-g=ly6sl4m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', '8b5a-200-82-177-163.ngrok.io']
+ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', 'e307-181-208-183-107.ngrok.io']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'hotel.apps.HotelConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
