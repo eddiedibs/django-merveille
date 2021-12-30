@@ -1,5 +1,6 @@
 {% extends 'hotel/base.html' %}
 {% load static %}
+{% load custom_filters %}
 
 
 {% block content %}
@@ -150,7 +151,7 @@
                             {% for post in posts %}
                                 <section class='know-info-comment-list-container'>
                                     <li class='know-info-comment-list-container__li'>{{ post.content }}</li>
-                                    <h6 class='know-info-comment-list-container__h6'>{{ post.author.first_name }} {{ post.author.last_name }}</h6>
+                                    <h6 class='know-info-comment-list-container__h6'>{{ post.firstName }} {{ post.lastName }}</h6>
                                     <p class='know-info-comment-list-container__p'>{{ post.date_posted|date:"F d, Y" }}</p>
                                 </section>
                             {% endfor %}
@@ -159,15 +160,21 @@
                         </ul>
                     </div>
                     <div class='know-info-form-container'>
-                        <form method="POST">
+                        <form method='POST'>
+                        <div class='know-info__form'>
                             {% csrf_token %}
-                            <fieldset class=''>
-                                <legend>Join Today</legend>
-                                <input type="text" name="" id="">
-                            </fieldset>
-
+                            
+                            {{ forms.firstName|addclass:'know-info-form-container__input' }}
+                            {{ forms.lastName|addclass:'know-info-form-container__input' }}
+                        </div>
+                        <div class='know-info__form'>
+                            <button class='know-info__button'>Send</button>
+                            {{ forms.email|addclass:'know-info-form-container__input-active' }}
+                            {{ forms.content|addclass:'know-info-form-container__input-active' }}
+                        </div>
                         </form>
                     </div>
+
                 </div>
             
             </div>

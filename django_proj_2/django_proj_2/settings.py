@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['192.168.0.106', '127.0.0.1', 'e307-181-208-183-107.ngrok.io']
 INSTALLED_APPS = [
     'hotel.apps.HotelConfig',
     'users.apps.UsersConfig',
+    'customFilters.apps.CustomfiltersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,6 +66,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+
+            'libraries':{
+                'custom_filters': 'customFilters.templatetags.custom_filters',
+            }
         },
     },
 ]

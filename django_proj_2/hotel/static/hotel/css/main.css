@@ -18,7 +18,8 @@
 4.  Button Classes 
     4.1 Arrow Button Classes
     4.2 First navBar Button classes 
-    4.3 Second navBar Button classes 
+    4.3 Second navBar Button classes
+    4.4 Know-info Button classes 
 
 5.  Image  Classes 
     5.1 Icon Classes
@@ -391,6 +392,32 @@ body{
     width: 100%;
 
 }
+
+
+/* 
+==============================================
+
+/// 4.4 Know-info Button classes ///
+
+==============================================
+*/
+
+
+.know-info__button{
+    position: absolute;
+    top: 100%;
+    margin-top: 5px;
+    width: 365px;
+    height: 50px;
+    font-family: var(--ff-mont), sans-serif;
+    color: white;
+    background-color: #B28659;
+    border: 1px solid #B28659;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
 
 
 /* 
@@ -854,6 +881,7 @@ body{
 .know-info-container-content{
     position: relative;
     display: flex;
+    justify-content:space-around;
 
 }
 
@@ -873,6 +901,67 @@ body{
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+
+.know-info__form:first-child{
+    display: flex;
+    position:absolute;
+    left: 55%;
+}
+
+
+.know-info__form:last-child{
+    position:absolute;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    left: 55%;
+
+}
+.know-info-form-container{
+    position:relative;
+    right: 0;
+    height: 100%;
+    width:100%;
+}
+
+
+
+.know-info-form-container__input{
+    font-family: var(--ff-mont), sans-serif;
+    height: 50px;
+    width: 180px;
+    border-radius: 5px;
+    padding-left: 20px;
+    border-color: #292929;
+    border-width: 1.5px;
+
+}
+
+.know-info-form-container__input:last-child{
+    margin-left: 5px;
+
+
+}
+.know-info-form-container__input-active{
+    font-family: var(--ff-mont), sans-serif;
+    height: 50px;
+    width: 365px;
+    border-radius: 5px;
+    padding-left: 20px;
+    border-color: #292929;
+    border-width: 1.5px;
+
+}
+
+.know-info-form-container__input-active:last-child{
+    padding-top: 8px;
+    margin-top: 5px;
+    height: 200px;
+    text-decoration: none;
+    resize: none;
+
+}
+
 
 
 /* 

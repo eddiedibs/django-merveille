@@ -1,17 +1,27 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Post
-from django.contrib.auth.forms import UserCreationForm
-
+from .forms import UserCommentForm
+from django.contrib import messages
 
 
 
 
 def home(request):
-    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('hotel-main')
+
+    else: 
+        form = UserCommentForm()
+
+
     context = {
         'posts': Post.objects.all(),
-        'form': form
+        'forms': form
     }
     return render(request, 'hotel/home.html', context)
 
