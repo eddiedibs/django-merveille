@@ -13,5 +13,7 @@ class UserCommentForm(forms.ModelForm):
         content = forms.CharField(widget=forms.Textarea(attrs={'placeholder':'Comments'}))
 
         class Meta:
+                #'model' Dictates where to save the form fields above. In this case, it is saved in Post db
                 model = Post
+                #'fields' specifies the fields that are in Post
                 fields = ['firstName', 'lastName', 'email', 'content']

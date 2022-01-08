@@ -4,15 +4,15 @@
 
 
 {% block content %}
-    <div class='image-container'>
-        <h1 class='image-container__h1'>Full enjoyment and unparalleled comfort all at the same place.</h1>
-        <p class='image-container__p'>Looking for a comfortable accommodation? What gives you
+    <section id='home-container'>
+        <h1 class='home-container__h1'>Full enjoyment and unparalleled comfort all at the same place.</h1>
+        <p class='home-container__p'>Looking for a comfortable accommodation? What gives you
             a happy and fun stay? Are you looking for a unique experience? All that and
             more in just one place: 
             Our unparalleled Hotel.
         </p>
-    <div>
-        <div>
+    <section>
+        <div class='image-container'>
             <div class='slider'>
                 <div class='slides'>
                     <div class='slides__img'>
@@ -55,19 +55,32 @@
                             hotel.
                         </p>
                     </div>
-                    <div class='about-icons'>
-                        <img src="{% static 'hotel/icons/Wifi.svg'%}" alt="">
-                        <img src="{% static 'hotel/icons/Horario.svg'%}" alt="">
-                        <img src="{% static 'hotel/icons/Estacionamiento.svg'%}" alt="">
+                    <div class='about-list-container'>
+                        <div class='about-icons'>
+                            <ul class='about-list'>
+                                <div class='about-icon-container'>
+                                    <img src="{% static 'hotel/icons/Wifi.svg'%}" alt="">
+                                    <li>Free wifi in the whole building</li>
+
+                                </div>
+                                <div class='about-icon-container'>
+                                    <img src="{% static 'hotel/icons/Horario.svg'%}" alt="">
+                                    <li>Schedule: 24 hrs assisting you</li>
+
+
+                                </div>
+                                <div class='about-icon-container'>
+                                    <img src="{% static 'hotel/icons/Estacionamiento.svg'%}" alt="">
+                                    <li>The hotel offers free parking</li>
+
+                                </div>
+                            </ul>
+
+                        </div>
+                        <div class='about-container-text-list'>
+                            
+                        </div>
                     </div>
-                    <div class='about-container-text-list'>
-                        <ul class='about-list'>
-                            <li>Free wifi in the whole building</li>
-                            <li>Schedule: 24 hrs assisting you</li>
-                            <li>The hotel offers free parking</li>
-                        </ul>
-                    </div>
-                    <div class='about-line'></div>
                     
                     <div class='about-slider'>
                         <div class='arrow-beige-btn-container'>
@@ -146,33 +159,35 @@
                     <a href="#"><img class='back-top-icon' src="{% static 'hotel/icons/Back to top.svg' %}" alt=""></a>
                 </div>
                 <div class='know-info-container-content'>
-                    <div>
-                        <ul class='know-info-comment-list'>
-                            {% for post in posts %}
-                                <section class='know-info-comment-list-container'>
-                                    <li class='know-info-comment-list-container__li'>{{ post.content }}</li>
-                                    <h6 class='know-info-comment-list-container__h6'>{{ post.firstName }} {{ post.lastName }}</h6>
-                                    <p class='know-info-comment-list-container__p'>{{ post.date_posted|date:"F d, Y" }}</p>
-                                </section>
-                            {% endfor %}
+                    <div class='know-info-container-content--active'>
+                        {% for post in posts %}
+                            <div class='know-info-comment-list-container'>
+                                <li class='know-info-comment-list-container__li'>{{ post.content }}</li>
+                                <h6 class='know-info-comment-list-container__h6'>{{ post.firstName }} {{ post.lastName }}</h6>
+                                <p class='know-info-comment-list-container__p'>{{ post.date_posted|date:"F d, Y" }}</p>
+                            </div>
+                        {% endfor %}
                             
                             
-                        </ul>
                     </div>
                     <div class='know-info-form-container'>
                         <form method='POST'>
-                        <div class='know-info__form'>
-                            {% csrf_token %}
+                            <div class='know-info__div'>
+                                {% csrf_token %}
+                                <!-- Here we access the specific form input fields, and add classes through the custom_filter.py
+                                app for styling -->
+                                {{ forms.firstName|addclass:'know-info-form-container__input' }}
+                                {{ forms.lastName|addclass:'know-info-form-container__input' }}
+                            </div>
+                            <div class='know-info__div'>
+                                {{ forms.email|addclass:'know-info-form-container__input-active' }}
+                                {{ forms.content|addclass:'know-info-form-container__input-active' }}
                             
-                            {{ forms.firstName|addclass:'know-info-form-container__input' }}
-                            {{ forms.lastName|addclass:'know-info-form-container__input' }}
-                        </div>
-                        <div class='know-info__form'>
-                            <button class='know-info__button'>Send</button>
-                            {{ forms.email|addclass:'know-info-form-container__input-active' }}
-                            {{ forms.content|addclass:'know-info-form-container__input-active' }}
-                        </div>
+                            </div>
+
                         </form>
+                        <button class='know-info__button'>Send</button>
+
                     </div>
 
                 </div>
