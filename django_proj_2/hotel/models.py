@@ -11,4 +11,4 @@ class Post(models.Model):
 
 
     def __str__(self):
-        return self.firstName + ' post.'
+        return self.firstName + f' post.(id={self.id})'

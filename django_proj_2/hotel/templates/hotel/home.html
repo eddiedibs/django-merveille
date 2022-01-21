@@ -55,7 +55,9 @@
                             hotel.
                         </p>
                     </div>
-                    <div class='about-list-container'>
+                    
+                    
+                    <div class='about-slider'>
                         <div class='about-icons'>
                             <ul class='about-list'>
                                 <div class='about-icon-container'>
@@ -75,30 +77,27 @@
 
                                 </div>
                             </ul>
-
-                        </div>
-                        <div class='about-container-text-list'>
-                            
+    
                         </div>
                     </div>
-                    
-                    <div class='about-slider'>
+                        
+                    <div class='about-slide'>
                         <div class='arrow-beige-btn-container'>
-                            <img class='right-arrow-beige' src="{% static 'hotel/icons/Right_beige.svg' %}" alt="">
                             <img class='left-arrow-beige'  src="{% static 'hotel/icons/Left_beige.svg' %}" alt="">
                         </div>
-                        <div class='about-slide'>
-                            <div class='about-slide__img'>
-                                <img src="{% static 'hotel/images/imagesAbout/imag1.png' %}" class='active' firstImg alt="">
+                        <div class='about-slide-img-container'>
+                            <img src="{% static 'hotel/images/imagesAbout/imag1.png' %}" class='active' firstImg alt="">
 
-                                <img src="{% static 'hotel/images/imagesAbout/imag2.png' %}" alt="">
+                            <img src="{% static 'hotel/images/imagesAbout/imag2.png' %}" alt="">
 
-                                <img src="{% static 'hotel/images/imagesAbout/imag3.png' %}" alt="">
+                            <img src="{% static 'hotel/images/imagesAbout/imag3.png' %}" alt="">
 
-                                <img src="{% static 'hotel/images/imagesAbout/imag4.png' %}" alt="">
-                                
-                                <img src="{% static 'hotel/images/imagesAbout/imag5.png' %}" lastImg alt="">
-                            </div>
+                            <img src="{% static 'hotel/images/imagesAbout/imag4.png' %}" alt="">
+                            
+                            <img src="{% static 'hotel/images/imagesAbout/imag5.png' %}" lastImg alt="">
+                        </div>
+                        <div class='arrow-beige-btn-container'>
+                            <img class='right-arrow-beige' src="{% static 'hotel/icons/Right_beige.svg' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -180,13 +179,13 @@
                                 {{ forms.lastName|addclass:'know-info-form-container__input' }}
                             </div>
                             <div class='know-info__div'>
-                                {{ forms.email|addclass:'know-info-form-container__input-active' }}
-                                {{ forms.content|addclass:'know-info-form-container__input-active' }}
-                            
-                            </div>
+                                {{ forms.email|addclass:'know-info-form-container__input-email' }}
+                                {{ forms.content|addclass:'know-info-form-container__input-comment' }}
+                                <button class='know-info__button'>Send</button>
 
+                            </div>
+                            
                         </form>
-                        <button class='know-info__button'>Send</button>
 
                     </div>
 
