@@ -86,13 +86,13 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 
 }
 
 body{
     background-color: rgb(46, 46, 46);
     font-family: var(--ff-mont), sans-serif;
-    overflow-x: hidden;
 
 }
 
@@ -209,17 +209,16 @@ body{
     color: #ffff;
     text-decoration: none;
     font-weight: bold;
+    padding-left: 5vw;
 
 }
 
 
 .burger {
     z-index: 3;
-    position: fixed;
     cursor: pointer;
+    padding-top: 1%;
     transition-duration: 500ms;
-    right: 10vw;
-    top:5vh;
     transition: all 0.5s ease;
 }
 
@@ -280,7 +279,8 @@ body{
 
 .arrow-beige-btn-container{
     
-    margin-top: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
     cursor:pointer;
 }
 
@@ -331,6 +331,10 @@ body{
 
 
 
+.btn-list-1{
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 .btn-list-1:hover{
     background-color: #B28659;
@@ -390,7 +394,9 @@ body{
 
 }
 
-
+.btn-list-2{
+    display: none;
+}
 /* 
 ==============================================
 
@@ -402,7 +408,7 @@ body{
 
 .know-info__button{
     margin-top: 5px;
-    width: 365px;
+    width: 100%;
     max-width: 30.7vw;
     height: 8vh;
     color: white;
@@ -489,7 +495,8 @@ body{
 */
 
 .about-icons img{
-    width: 80px;
+    width: 60px;
+    margin-right: 1rem;
 }
 
 
@@ -561,10 +568,7 @@ body{
 
 
 
-.about-container__div{
-    width: 100%;
-    height: 100%;
-}
+
 
 
 .about-container__div-h1{
@@ -581,7 +585,7 @@ body{
 
 .about-container-text p {
     font-family: var(--ff-mont);
-    font-size: 1rem;
+    font-size: 1.1rem;
     word-wrap: break-word;
     font-weight: 400;
     word-spacing: 3px;
@@ -596,7 +600,7 @@ body{
     display: block;
     list-style: none;
     padding: 2vh 0;
-    font-size: 1.2vmax;
+    font-size: 1rem;
 }
 
 /* 
@@ -766,6 +770,10 @@ body{
     height: 100vh;
 }
 
+.about-container__div{
+    width: 100%;
+    height: 100%;
+}
 
 .about-icon-container{
     display: flex;
@@ -773,10 +781,7 @@ body{
 
 
 
-.about-container-text, .about-container-text-list{
-    padding-top: 5%;
 
-}
 
 .about-container-text-wrapper{
     position: relative;
@@ -784,16 +789,13 @@ body{
     margin: 0 10%;
     justify-content: center;
 }
-
-.about-container-text{
+.about-container-text-wrapper div{
     margin-top: auto;
     margin-bottom: auto;
-
 }
 
-
 .about-slider{
-    margin: 5% 10%;
+    margin: 0 10%;
 }
 
 .about-slide{
@@ -936,15 +938,14 @@ body{
 
 
 .know-info-form-container{
-    height: 50vh;
+    height: 100%;
     width:100%;
 }
 
 
 
 .know-info__div{
-    width:100%;
-    height: fit-content;
+    width:63%;
 
 }
 
@@ -970,11 +971,8 @@ body{
 
 
 .know-info-form-container__input{
-    
-    height: 50px;
-    width: 180px;
-    max-width: 15vw;
-    max-height: 15vh;
+    width: 100%;
+    height: 8vh;
     border-radius: 5px;
     padding-left: 20px;
     border-color: #292929;
@@ -989,8 +987,8 @@ body{
 }
 .know-info-form-container__input-email{
     
-    height: 50px;
-    width: 365px;
+    height: 8vh;
+    width: 100%;
     max-width: 30.7vw;
     max-height: 30vh;
     border-radius: 5px;
@@ -1000,16 +998,17 @@ body{
 }
 
 .know-info-form-container__input-comment{
+    
     padding-top: 8px;
     margin-top: 5px;
-    width: 365px;
+    width: 100%;
+    height: 30vh;
     max-width: 30.7vw;
     max-height: 30vh;
     border-radius: 5px;
     padding-left: 20px;
     border-color: #292929;
     border-width: 1.5px;
-    height: 200px;
     text-decoration: none;
     resize: none;
 
@@ -1020,7 +1019,7 @@ body{
 /* 
 ================================================================================================
 
-                                       8. Media Screen
+                            8. Media Screen Responsive Measures
 
 =================================================================================================
 */
@@ -1028,6 +1027,35 @@ body{
 
 
 @media screen and (max-width:1024px){
+/* 
+======================
+      Table of
+      Contents
+
+
+1.  navBar Classes
+
+5.  Typography Classes
+    5.1 Home Page Section
+    5.2 About Section
+
+6.  Wrapper Classes
+    6.1  Wrapper About Classes
+
+
+======================
+*/
+
+
+/* 
+======================
+
+  1. navBar Classes
+
+======================
+*/
+
+
     .nav__list{
         width:60%;
     }
@@ -1041,10 +1069,90 @@ body{
 
 
 
+/* 
+============================
+
+5.  Typography Classes
+
+=============================
+*/
+
+/* 
+===================================
+
+  5.2 About Section
+
+====================================
+*/
+    .about-container-text p {
+        font-size: 0.8rem;
+    }
+
+
+
+/* 
+===================================
+
+  6.1  Wrapper About Classes
+
+====================================
+*/
+
+   
+
+
+    .know-info-form-container{
+        height: 50vh;
+        width:100%;
+    }
+
+
+
+
+
+
+
+
+    .know-info-form-container__input{
+        width: 100%;
+        height: 8vh;
     
+    }
+
+
+
+    .know-info-form-container__input-email{
+    
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .know-info-form-container__input-comment{
+        width: 100%;
+        height: 25vh;
+    
+    }
+    
+
+
+
+
+
+
 }
 
 
+
+@media screen and (max-height:760px){
+    .about-container__div-h1{
+        padding-bottom: 0;
+    }
+
+    .know-info-header{
+        margin-bottom: 0;
+    }
+
+}
 
 /* 
 ================================================================================================
@@ -1100,7 +1208,7 @@ body{
 */
     
     body{
-        overflow-x: hidden;
+        overflow-x: scroll;
     }
 
     .nav {
@@ -1126,7 +1234,7 @@ body{
 */
 
 
-    .nav__list{
+    .nav__list2{
         z-index: 3;
         position: absolute;
         right: 0;
@@ -1147,8 +1255,8 @@ body{
     .logo{
         position: absolute;
         top: 6vh;
-        width: 50vw;
-        left: -1vw;
+        width: 30vw;
+        left: 10vw;
 
     
     }
@@ -1159,11 +1267,9 @@ body{
 
     .burger{
         z-index: 3;
-        display: block;
         position: relative;
-        right: 10vw;
-        top:8vh;
-        position: fixed;
+        margin-left: auto;
+        display: block;
         transition: all 0.3s ease;
     }
 
@@ -1178,33 +1284,23 @@ body{
 ======================
 */
 
-    .nav__list a{
-        position: relative;
-        font-size: 3vh;
-        padding: 5vh 1vw;    
 
+
+
+    .btn-list-1{
+        display: none;
     }
 
-    .nav__list a{
-        opacity: 0;
-        text-align: center;
+    .btn-list-2{
+        display: block;
     }
 
 
-
-    .btn-list-1:hover{
+    .btn-list-2:hover{
         background-color: #B28659;
+        transition-duration: 300ms;
+
     }
-
-    .nav__list a {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        border: none;
-        background-color: transparent;
-    }
-
-
 /* 
 ==================================
 
@@ -1280,10 +1376,6 @@ body{
         height: 100vh;
     }
 
-    .slides{
-        margin-bottom: 1rem;
-
-    }
 
 
     .about-slider{

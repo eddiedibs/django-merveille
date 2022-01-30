@@ -150,50 +150,48 @@
             </div>
         </section>
     </div>
-    <div>
-        <section id='know-info-container'>
-            <div class='know-info-container__div'>
-                <h4 class='know-info-header'>Let us know about your experience.</h4>
-                <div>
-                    <a href="#"><img class='back-top-icon' src="{% static 'hotel/icons/Back to top.svg' %}" alt=""></a>
-                </div>
-                <div class='know-info-container-content'>
-                    <div class='know-info-container-content--active'>
-                        {% for post in posts %}
-                            <div class='know-info-comment-list-container'>
-                                <li class='know-info-comment-list-container__li'>{{ post.content }}</li>
-                                <h6 class='know-info-comment-list-container__h6'>{{ post.firstName }} {{ post.lastName }}</h6>
-                                <p class='know-info-comment-list-container__p'>{{ post.date_posted|date:"F d, Y" }}</p>
-                            </div>
-                        {% endfor %}
-                            
-                            
-                    </div>
-                    <div class='know-info-form-container'>
-                        <form method='POST'>
-                            <div class='know-info__div'>
-                                {% csrf_token %}
-                                <!-- Here we access the specific form input fields, and add classes through the custom_filter.py
-                                app for styling -->
-                                {{ forms.firstName|addclass:'know-info-form-container__input' }}
-                                {{ forms.lastName|addclass:'know-info-form-container__input' }}
-                            </div>
-                            <div class='know-info__div'>
-                                {{ forms.email|addclass:'know-info-form-container__input-email' }}
-                                {{ forms.content|addclass:'know-info-form-container__input-comment' }}
-                                <button class='know-info__button'>Send</button>
-
-                            </div>
-                            
-                        </form>
-
-                    </div>
-
-                </div>
-            
+    <section id='know-info-container'>
+        <div class='know-info-container__div'>
+            <h4 class='know-info-header'>Let us know about your experience.</h4>
+            <div>
+                <a href="#"><img class='back-top-icon' src="{% static 'hotel/icons/Back to top.svg' %}" alt=""></a>
             </div>
-        </section>
-    </div>
+            <div class='know-info-container-content'>
+                <div class='know-info-container-content--active'>
+                    {% for post in posts %}
+                        <div class='know-info-comment-list-container'>
+                            <li class='know-info-comment-list-container__li'>{{ post.content }}</li>
+                            <h6 class='know-info-comment-list-container__h6'>{{ post.firstName }} {{ post.lastName }}</h6>
+                            <p class='know-info-comment-list-container__p'>{{ post.date_posted|date:"F d, Y" }}</p>
+                        </div>
+                    {% endfor %}
+                        
+                        
+                </div>
+                <div class='know-info-form-container'>
+                    <form method='POST'>
+                        <div class='know-info__div'>
+                            {% csrf_token %}
+                            <!-- Here we access the specific form input fields, and add classes through the custom_filter.py
+                            app for styling -->
+                            {{ forms.firstName|addclass:'know-info-form-container__input' }}
+                            {{ forms.lastName|addclass:'know-info-form-container__input' }}
+                        </div>
+                        <div class='know-info__div'>
+                            {{ forms.email|addclass:'know-info-form-container__input-email' }}
+                            {{ forms.content|addclass:'know-info-form-container__input-comment' }}
+                            <button class='know-info__button'>Send</button>
+
+                        </div>
+                        
+                    </form>
+
+                </div>
+
+            </div>
+        
+        </div>
+    </section>
 
 
 {% endblock content %}
