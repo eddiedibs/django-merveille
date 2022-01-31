@@ -31,6 +31,7 @@
     6.2 About Section
     6.3 Services Section
     6.4 know-info Section
+    6.5 footer Section
 
 
 7.  Wrapper Classes
@@ -39,6 +40,7 @@
     7.3 Wrapper Services Classes
     7.4  Wrapper Map Classes
     7.5  Wrapper know-info Classes
+    7.6  Wrapper Footer-section Classes
 
 
 8.  Active Classes
@@ -521,6 +523,13 @@ body{
 }
 
 
+
+.contact-social-media-icon{
+    width: 50px;
+
+}
+
+
 /* 
 ===========================
 
@@ -575,9 +584,10 @@ body{
     display: block;
     font-weight: 700;
     margin-top: 0;
+    margin-bottom: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    font-size: 3vmax;
+    font-size: 2.5rem;
     font-family: var(--ff-mont);
     text-align: center;
     color: #292929;
@@ -656,7 +666,6 @@ body{
     font-family: var(--ff-mont);
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 5%;
 
 
 
@@ -721,6 +730,37 @@ body{
     font-size: .7rem;
 
 }
+
+
+/* 
+================================
+
+/// 6.5 footer Section ///
+
+================================
+*/
+
+
+.footer-section-content p{
+    font-family: var(--ff-mont);
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+
+
+}
+
+
+
+.follow-us-p{
+
+}
+
+
+
+
+
+
 /* 
 ===========================
 
@@ -1015,11 +1055,51 @@ body{
 }
 
 
+/* 
+=============================================
+
+/// 7.6  Wrapper Footer-section Classes ///
+
+============================================
+*/
+
+#footer-section{
+    background-color: white;
+    height: 30vh;
+    width: 100vw;
+}
+
+.footer-section-bar{
+    background-color: black;
+    height: 2px;
+    width: 80%;
+    border-radius: 3px;
+    margin: 0 10%;
+    
+}
+
+.footer-section-content__div{
+    display: flex;
+    justify-content: space-around;
+    gap: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
+
+.contact-social-media-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+
+
 
 /* 
 ================================================================================================
 
-                            8. Media Screen Responsive Measures
+                        8. Media Screen Responsive Measures PC screens
 
 =================================================================================================
 */
@@ -1035,12 +1115,12 @@ body{
 
 1.  navBar Classes
 
-5.  Typography Classes
-    5.1 Home Page Section
-    5.2 About Section
+2.  Typography Classes
+    2.1 About Section
 
-6.  Wrapper Classes
-    6.1  Wrapper About Classes
+3.  Wrapper Classes
+    3.1  Wrapper About Classes
+    3.2  Wrapper Footer-section Classes
 
 
 ======================
@@ -1072,7 +1152,7 @@ body{
 /* 
 ============================
 
-5.  Typography Classes
+2.  Typography Classes
 
 =============================
 */
@@ -1080,26 +1160,25 @@ body{
 /* 
 ===================================
 
-  5.2 About Section
+  2.1 About Section
 
 ====================================
 */
     .about-container-text p {
         font-size: 0.8rem;
-    }
 
+    }
 
 
 /* 
 ===================================
 
-  6.1  Wrapper About Classes
+  3.1  Wrapper know-info Classes
 
 ====================================
 */
 
    
-
 
     .know-info-form-container{
         height: 50vh;
@@ -1136,6 +1215,37 @@ body{
 
 
 
+    .know-info-form-container__input, 
+    .know-info-form-container__input-comment, 
+    .know-info-form-container__input-email{
+        padding-left: 5px;
+    }
+
+
+
+/* 
+=======================================
+
+  3.2  Wrapper Footer-section Classes
+
+=======================================
+*/
+
+#footer-section{
+    height: 50vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1143,28 +1253,111 @@ body{
 
 
 
-@media screen and (max-height:760px){
+
+
+/* 
+================================================================================================
+
+                            Media screen Responsive Measures mobile screens
+
+=================================================================================================
+*/
+
+
+/* 
+================================================================================================
+
+                        for a max HEIGHT of 768px (for devices on horizontal mode)
+
+=================================================================================================
+*/
+@media screen and (max-height:768px){
+
+
+/* 
+=================================================
+
+            About Section Typography
+
+=================================================
+*/
     .about-container__div-h1{
         padding-bottom: 0;
     }
 
     .know-info-header{
         margin-bottom: 0;
+        margin-bottom: 2%;
+
     }
 
+    
+    .about-icon-container li{
+        font-size: 0.8rem;
+    }
+
+/* 
+=================================================
+
+        About and Know-info Section Wrappers
+
+=================================================
+*/
+
+    .know-info-container__div, #about-container, 
+    .about-wrapper{
+        height: 108vh;
+    }
+  
 }
+
 
 /* 
 ================================================================================================
 
-                                        Media screen:
-                                            Mobile
+                    for a max HEIGHT of 350px (for devices with keyboard on)
 
 =================================================================================================
 */
 
 
-@media screen and (max-width:760px){
+@media screen and (max-height:350px){
+
+/* 
+=================================================
+
+        About and know-info Section Wrappers
+
+=================================================
+*/
+
+    .about-container-text-wrapper{
+        margin: 0 5%;
+    }
+
+    .about-slide-img-container img{
+        height:60vh
+    }
+
+
+    .know-info-container__div, #about-container, 
+    .about-wrapper{
+        height: 150vh;
+    }
+
+    
+}
+/* 
+================================================================================================
+
+                    for a max WIDTH of 768px (for devices on vertical mode)
+
+=================================================================================================
+*/
+
+
+
+@media screen and (max-width:768px){
 
 /* 
 ======================
@@ -1188,7 +1381,9 @@ body{
 
 6.  Wrapper Classes
     6.1  Wrapper About Classes
-
+    6.2  Wrapper Service Section Classes 
+    6.3  Wrapper Know-info Classes
+    6.4  Wrapper footer-section Classes
 
 ======================
 */
@@ -1208,7 +1403,8 @@ body{
 */
     
     body{
-        overflow-x: scroll;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     .nav {
@@ -1240,14 +1436,14 @@ body{
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, .9);
         display: flex;
         flex-direction: column;
         border: none;
         align-items: center;
         width: 100%;
         transition-duration: 500ms;
-        transform: translateX(100%);
+        transform: translateX(200%);
     }
 
 
@@ -1301,6 +1497,17 @@ body{
         transition-duration: 300ms;
 
     }
+
+
+    .know-info__button{
+        width: 120%;
+        max-width: none;
+    }
+
+
+
+
+
 /* 
 ==================================
 
@@ -1321,31 +1528,31 @@ body{
         
 
     .arrow-beige-btn-container{
+    
+        margin-top: auto;
+        margin-bottom: auto;
         cursor:pointer;
     }
-
-    .left-arrow-beige{
-        z-index: 2;
-        background-color: rgba(44, 44, 44, 0.582);
-        position: absolute;
-        left:-64vw;
-        top: 30vh;
-        width: 10vw;
-        height: 20vh;
-    }
-
-
-    .right-arrow-beige{
-        z-index: 2;
-        background-color: rgba(44, 44, 44, 0.582);
-        position: absolute;
-        left: 24vw;
-        top: 30vh;
-        width: 10vw;
-        height: 20vh;
-}
     
+    .right-arrow-beige,.left-arrow-beige{
+        z-index: 2;
+        position: absolute;
+        top: 115%;
+        background-color: #000000d2;
+        width: 8vw;
+        height: 100vh;
+    }
+    
+    .right-arrow-beige{
+        bottom: 0;
+        right: -12%;
+    }
+    
+    .left-arrow-beige{
+        bottom: 0;
+        left: -14%;
 
+    }
 
 
 
@@ -1378,17 +1585,15 @@ body{
 
 
 
-    .about-slider{
-        position: relative;
-    }
-    
+
+
     
     
     .about-slide-img-container img{
-        display: none;
         position: absolute;
-        top:0;
-        right: -35vw;
+        right: -12%;
+        top: 115%;
+        display: none;
         width: 100vw;
         height: 100vh;
     }
@@ -1419,7 +1624,16 @@ body{
         width: 40px;
     } */
 
+    .service-icon{
+        left: 30%;
+        top: 30%;
+    }
 
+    .back-top-icon{
+        display: none;
+
+    }
+    
 /* 
 ===========================
 
@@ -1487,21 +1701,51 @@ body{
     
     .about-container-text p {
         font-family: var(--ff-mont);
-        font-size: 1.4vmax;
+        font-size: 1.5rem;
         font-weight: 400;
         word-spacing: 3px;
-        display: none;
-        bottom: 0;
+        text-align: center;
+        margin-bottom: 5%;
     }
     
     .about-list{
         font-family: var(--ff-mont);
         font-style: italic;
         font-weight: 500;
-        display: none;
         list-style: none;
     }
 
+   
+    .about-list div{
+        margin-bottom: 20px;
+    }
+    .about-list li{
+        font-size: 2rem;
+    }
+    .about-list div:first-child{
+        margin-top: 40px;
+    }
+
+
+
+/* 
+================================
+
+/// 5.3 know-info Section ///
+
+================================
+*/
+
+    .know-info-header{
+        padding-top: 5%;
+        margin-bottom: 10%;
+        font-family: var(--ff-mont);
+        font-size: 2.5rem;
+        text-align: center;
+
+
+
+    }
 
 
 
@@ -1531,7 +1775,7 @@ body{
 
     .about-wrapper{
         width:100vw;
-        height:100vh;
+        height:260vh;
     }
 
 
@@ -1539,7 +1783,7 @@ body{
         display: block;
         background-color: #f8f8f8;
         width: 100vw;
-        height: 100vh;
+        height: 260vh;
     }
 
     .about-container-text, .about-container-text-list{
@@ -1549,10 +1793,8 @@ body{
     }
 
     .about-container-text-wrapper{
-        position: relative;
-        right: 10%;
         display: flex;
-        margin: 0 20%;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -1562,18 +1804,103 @@ body{
     }
 
 
-    .about-list li{
-        display: none;
-        padding: 2vh 0;
-        font-size: 3vmax;
+    .about-slider{
+        margin: 0;
     }
 
-    .about-line{
-        display: none;
+/* 
+============================================ 
+
+/// 6.2  Wrapper Service Section Classes ///
+
+=============================================
+*/
+
+
+    #services-container{
+        height: 250vh;
     }
 
 
-    
+    .services-container__div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2vh;
+        height: 35%;
+
+    }
+
+    /* 
+======================================
+
+/// 6.3  Wrapper Know-info Classes ///
+
+======================================
+*/
+    #know-info-container, .know-info-container__div{
+        height: 150vh
+    }
+
+
+
+    .know-info-container-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .know-info-container-content--active{
+        position: absolute;
+        bottom: -130%;
+        height: 55vh;
+        width: 95%;
+        margin-left: 2%;
+        margin-right: 1%;
+    }
+
+
+    .know-info-form-container__input-email,
+    .know-info-form-container__input-comment{
+        
+        width: 120%;
+        max-width: none;
+    }
+
+    .know-info__div:first-child{
+        width: 96%;
+    }
+
+
+
+    .know-info__div{
+        position: relative;
+        left: -14%;
+        width: 80%;
+    }
+
+
+
+    /* 
+============================================
+
+/// 6.4  Wrapper footer-section Classes ///
+
+===========================================
+*/
+
+
+
+    .footer-section-content{
+        margin-top: 5%;
+    }
+
+
+
+
+
+
+
+
 
 
 

@@ -103,7 +103,6 @@
                 </div>
             </div>
             
-            
         </section>
         
     </div>
@@ -153,9 +152,7 @@
     <section id='know-info-container'>
         <div class='know-info-container__div'>
             <h4 class='know-info-header'>Let us know about your experience.</h4>
-            <div>
-                <a href="#"><img class='back-top-icon' src="{% static 'hotel/icons/Back to top.svg' %}" alt=""></a>
-            </div>
+            <a href="#"><img class='back-top-icon' src="{% static 'hotel/icons/Back to top.svg' %}" alt=""></a>
             <div class='know-info-container-content'>
                 <div class='know-info-container-content--active'>
                     {% for post in posts %}
@@ -192,7 +189,25 @@
         
         </div>
     </section>
+    <section id='footer-section'>
+        <div class='footer-section-bar'></div>
+        <div class='footer-section-content'>
+            <p>Phone: (206) 622-6400 | Reservations: (800) 426-1265 | Email: info@hotelmerveille.com</p>
+        <div class='footer-section-content__div'>
+            <p>All rights reserved, web created by Team Pixel</p>
+            <p class='follow-us-p'>Follow us</p>
+            <div class='contact-social-media-container'>
+                <a href=""><img class='contact-social-media-icon' src="{% static 'hotel/icons/Twt.svg' %}" alt=""></a>
+                <a href=""><img class='contact-social-media-icon' src="{% static 'hotel/icons/Fb.svg' %}" alt=""></a>
+                <a href=""><img class='contact-social-media-icon' src="{% static 'hotel/icons/Ig.svg' %}" alt=""></a>
+            </div>
+            
+        </div>
+        </div>
 
+
+
+    </section>
 
 {% endblock content %}
 
