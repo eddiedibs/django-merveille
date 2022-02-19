@@ -173,9 +173,11 @@ function arrowMotion(){
         const view = (function (helpers) {
           const DOMSelectors = {
             carouselInnerSlider: ".slides",
-            slide: "#slide",
             prevButton: ".left-arrow",
             nextButton: ".right-arrow",
+            playButton: '.play-btn',
+            pauseButton: ".pause-btn",
+            playPauseButtons: '.play-pause-container',
             carouselImages: ".slides-img-container > img",
           };
           const DOMElements = helpers.getDOMElements(DOMSelectors);
@@ -222,10 +224,14 @@ function arrowMotion(){
             handleAdding();
             DOMElements.nextButton.addEventListener("click", handleNextImage);
             DOMElements.prevButton.addEventListener("click", handlePrevImage);
+            DOMElements.playPauseButtons.addEventListener("click", handleSlide);
+         
           }
           function removeEventListeners() {
             DOMElements.nextButton.removeEventListener("click", handleNextImage);
             DOMElements.prevButton.removeEventListener("click", handlePrevImage);
+            DOMElements.playPauseButtons.removeEventListener("click", handleSlide);
+
           }
           function handleNextImage() {
             handleRemove();
@@ -247,8 +253,12 @@ function arrowMotion(){
           }
          
           function handleSlide() {
-            const isChecked = true;
-            if (isChecked) {
+            
+            DOMElements.playButton.classList.toggle('play-btn--active')
+            DOMElements.pauseButton.classList.toggle('pause-btn--active')
+            isChecked = DOMElements.playButton.classList
+            
+            if (isChecked[1] == 'play-btn--active') {
               modal.state.intervalID = setInterval(() => {
                 handleNextImage();
               }, modal.CONSTANTS.TIMER);
@@ -256,11 +266,8 @@ function arrowMotion(){
               clearInterval(modal.state.intervalID);
               modal.state.intervalID = null;
             }
-
             
           }
-          handleSlide();
-
           function handleRemove() {
             view.removeClassToIndex(
               modal.CONSTANTS.ACTIVE_CLASS_NAME,
@@ -457,12 +464,6 @@ mainApp();
 
 
     
-
-
-
-
-
-
 
 
 
