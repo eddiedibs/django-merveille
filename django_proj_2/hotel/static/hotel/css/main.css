@@ -203,7 +203,7 @@ body{
     border: none;
     align-items: center;
     width: 100%;
-    transform: translateX(100%);
+    transform: translateX(170%);
 }
 
 .nav__list2 a{
@@ -253,30 +253,31 @@ body{
 ==================================
 */
 
+.main-btn-container{
+    z-index: 1;
+    height: 15vh;
+    position: relative;
+}
 
 .arrow-btn-container{
+    position: absolute;
+    display: flex;
     cursor:pointer;
+    right: 0;
+    bottom: 0;
     
 }
 
 
-.left-arrow{
-    position: absolute;
-    left: 86vw;
-    top: 40vmax;
-    width: 3vw;
-    height: 5vh;
+.left-arrow, .right-arrow, .play-btn{
+
+    width: 30px;
+    height: 30px;
 }
 
-.right-arrow{
-    position: absolute;
-    left: 91vw;
-    top: 40vmax;
-    width: 3vw;
-    height: 5vh;
+.play-btn{
+    margin-left: .2vw;
 }
-
-
 
 
 .arrow-beige-btn-container{
@@ -324,7 +325,7 @@ body{
 .nav__list a{
     position: relative;
     top: 0.8vh;
-    font-size: 2vh;
+    font-size: 12px;
     line-height: 5vh;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -340,7 +341,7 @@ body{
 
 .btn-list-1:hover{
     background-color: #B28659;
-    border: 2px solid white;
+    border: 1px solid white;
 }
 
 
@@ -436,31 +437,19 @@ body{
     height: 100%;
 }
 
-.slider{
-    overflow: hidden;
-}
-
-.div__img{
-    width:100vw;
-    height: 100vh;
-    
-}
-
-.slides__img img{
-    width: 100vw;
-}
 
 .slides{
     display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition-duration: 700ms;
 }
 
-.about-slider{
-    position: relative;
+.slides-img-container{
+    width: 100%;
+    height: 100%;
+}
+
+.slides-img-container img{
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -546,11 +535,13 @@ body{
 ================================
 */
 
+.home-container__h1, .home-container__p{
+    z-index: 1;
+
+}
+
 
 .home-container__h1{
-    bottom: 8vh;
-    position: absolute;
-    padding: 38vh 20vw;
     font-size: 2rem;
     font-family: var(--ff-mont);
     text-align: center;
@@ -558,14 +549,15 @@ body{
 }
 
 .home-container__p{
-    position: absolute;
-    padding: 55vh 30vw;
     font-size: 1.3rem;
     font-weight: 300;
     font-family: var(--ff-mont);
     color: white;
     text-align: center;
 }
+
+
+
 
 /* 
 ================================
@@ -752,11 +744,6 @@ body{
 
 
 
-.follow-us-p{
-
-}
-
-
 
 
 
@@ -779,10 +766,22 @@ body{
 */
 
 #home-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 100%;
     width: 100%;
 }
+.home-container__div{
+    margin: 40vh 10vw 0vh 10vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 
+}
 
 
 /* 
@@ -797,10 +796,6 @@ body{
 
 
 
-.about-wrapper{
-    width:100vw;
-    height:100vh;
-}
 
 
 #about-container{
@@ -1231,17 +1226,16 @@ body{
 =======================================
 */
 
-#footer-section{
-    height: 50vh;
-}
+    #footer-section{
+        height: 50vh;
+    }
 
 
 
 
 
 
-
-
+   
 
 
 
@@ -1304,8 +1298,7 @@ body{
 =================================================
 */
 
-    .know-info-container__div, #about-container, 
-    .about-wrapper{
+    .know-info-container__div, #about-container{
         height: 108vh;
     }
   
@@ -1340,8 +1333,7 @@ body{
     }
 
 
-    .know-info-container__div, #about-container, 
-    .about-wrapper{
+    .know-info-container__div, #about-container{
         height: 150vh;
     }
 
@@ -1381,9 +1373,10 @@ body{
 
 6.  Wrapper Classes
     6.1  Wrapper About Classes
-    6.2  Wrapper Service Section Classes 
-    6.3  Wrapper Know-info Classes
-    6.4  Wrapper footer-section Classes
+    6.2  Wrapper About Classes
+    6.3  Wrapper Service Section Classes 
+    6.4  Wrapper Know-info Classes
+    6.5  Wrapper footer-section Classes
 
 ======================
 */
@@ -1494,7 +1487,7 @@ body{
 
     .btn-list-2:hover{
         background-color: #B28659;
-        transition-duration: 300ms;
+        transition-duration: 100ms;
 
     }
 
@@ -1566,25 +1559,13 @@ body{
 
 
 
-    .slides__img img{
+    .slides-img-container img{
         width:100vw;
         height: 100vh;
         object-fit: cover;
         object-position: center;
         image-resolution: 1000px;
     }
-
-    .div__img{
-        margin-top: 110px;
-        object-fit: cover;
-        object-position: center;
-        image-resolution: 1000px;
-        width: 100vw;
-        height: 100vh;
-    }
-
-
-
 
 
     
@@ -1651,25 +1632,7 @@ body{
 */
 
 
-    .home-container__h1{
-        position: absolute;
-        padding: 30vh 10vw;
-        bottom: 20vh;
-        font-size: 1.5rem;   
-        resize: none;
-        font-family: var(--ff-mont);
-        color: white;
-    }
 
-    .home-container__p{
-        position: none;
-        padding: 55vh 10vw;
-        font-size: 1.2rem;
-        font-weight: 300;
-        font-family: var(--ff-mont);
-        color: white;
-        text-align: center;
-    }
 
 
 /* 
@@ -1759,12 +1722,24 @@ body{
 ===========================
 */
 
+/* 
+======================================
 
+/// 6.1  Wrapper Home Classes ///
+
+======================================
+*/
+
+
+.home-container__div{
+    margin: 20vh 10vw 0vh 10vw;
+
+}
 
 /* 
 ======================================
 
-/// 6.1  Wrapper About Classes ///
+/// 6.2  Wrapper About Classes ///
 
 ======================================
 */
@@ -1772,11 +1747,6 @@ body{
 
 
 
-
-    .about-wrapper{
-        width:100vw;
-        height:260vh;
-    }
 
 
     #about-container{
@@ -1811,7 +1781,7 @@ body{
 /* 
 ============================================ 
 
-/// 6.2  Wrapper Service Section Classes ///
+/// 6.3  Wrapper Service Section Classes ///
 
 =============================================
 */
@@ -1833,7 +1803,7 @@ body{
     /* 
 ======================================
 
-/// 6.3  Wrapper Know-info Classes ///
+/// 6.4  Wrapper Know-info Classes ///
 
 ======================================
 */
@@ -1883,7 +1853,7 @@ body{
     /* 
 ============================================
 
-/// 6.4  Wrapper footer-section Classes ///
+/// 6.5  Wrapper footer-section Classes ///
 
 ===========================================
 */
@@ -1907,7 +1877,7 @@ body{
 */
 
 @media screen and (max-width:600px){
-    .about-wrapper, #about-container{
+    #about-container{
         height:285vh;
     }
 
@@ -1915,6 +1885,23 @@ body{
 
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 ================================================================================================
 

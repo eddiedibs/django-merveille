@@ -5,107 +5,119 @@
 
 {% block content %}
     <section id='home-container'>
-        <h1 class='home-container__h1'>Full enjoyment and unparalleled comfort all at the same place.</h1>
-        <p class='home-container__p'>Looking for a comfortable accommodation? What gives you
-            a happy and fun stay? Are you looking for a unique experience? All that and
-            more in just one place: 
-            Our unparalleled Hotel.
-        </p>
-    <section>
-        <div class='image-container'>
-            <div class='slider'>
-                <div class='slides'>
-                    <div class='slides__img'>
-                        <img src="{% static 'hotel/images/portada1_2.jpg' %}" class='first' alt="">
-                    </div>
-
-                    <div class='slides__img'>
-                        <img src="{% static 'hotel/images/portada2.jpg' %}" alt="">
-                    </div>
-
-                    <div class='slides__img'>
-                        <img src="{% static 'hotel/images/portada3_2.jpg' %}" alt="">
-                    </div>
-
-                </div>
+        <div class='home-container__div'>
+            <h1 class='home-container__h1'>Full enjoyment and unparalleled comfort all at the same place.</h1>
+            <p class='home-container__p'>Looking for a comfortable accommodation? What gives you
+                a happy and fun stay? Are you looking for a unique experience? All that and
+                more in just one place: 
+                Our unparalleled Hotel.
+            </p>
+            <div class='main-btn-container'>
                 <div class='arrow-btn-container'>
-                    <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
                     <img class='left-arrow' src="{% static 'hotel/icons/left.svg' %}" alt="">
+                    <img class='play-btn' src="{% static 'hotel/icons/play.svg' %}" alt="">
+                    <img class='right-arrow' src="{% static 'hotel/icons/right.svg' %}" alt="">
                 </div>
+
             </div>
-        </div>  
-    </div>
-    <div class='about-wrapper'>
-        <section id='about-container'> 
-            <div class='about-container__div'>
-                <h1 class='about-container__div-h1'>ABOUT MERVEILLE</h1>
-                <div class='about-container-text-wrapper'>
-                    <div class='about-container-text'>
-                        
-                        <p>Merveille is a  modern and elegant
-                            hotel located near the Juares Theater
-                            and the Barquisimeto Museum.</p>
-                            
-                            <p>The bright and functional rooms have all the
-                            comforts. There are room services, meeting rooms and
-                            diners.</p>
-
-                            <p>The hotel has a beautiful outdoor swimming pool and 
-                            a casual restaurant bar with a gorgeous view of the
-                            hotel.
-                        </p>
-                    </div>
-                    
-                    
-                    <div class='about-slider'>
-                        <div class='about-icons'>
-                            <ul class='about-list'>
-                                <div class='about-icon-container'>
-                                    <img src="{% static 'hotel/icons/Wifi.svg'%}" alt="">
-                                    <li>Free wifi in the whole building</li>
-
-                                </div>
-                                <div class='about-icon-container'>
-                                    <img src="{% static 'hotel/icons/Horario.svg'%}" alt="">
-                                    <li>Schedule: 24 hrs assisting you</li>
-
-
-                                </div>
-                                <div class='about-icon-container'>
-                                    <img src="{% static 'hotel/icons/Estacionamiento.svg'%}" alt="">
-                                    <li>The hotel offers free parking</li>
-
-                                </div>
-                            </ul>
-    
-                        </div>
-                    </div>
-                        
-                    <div class='about-slide'>
-                        <div class='arrow-beige-btn-container'>
-                            <img class='left-arrow-beige'  src="{% static 'hotel/icons/Left_beige.svg' %}" alt="">
-                        </div>
-                        <div class='about-slide-img-container'>
-                            <img src="{% static 'hotel/images/imagesAbout/imag1.png' %}" class='active' firstImg alt="">
-
-                            <img src="{% static 'hotel/images/imagesAbout/imag2.png' %}" alt="">
-
-                            <img src="{% static 'hotel/images/imagesAbout/imag3.png' %}" alt="">
-
-                            <img src="{% static 'hotel/images/imagesAbout/imag4.png' %}" alt="">
-                            
-                            <img src="{% static 'hotel/images/imagesAbout/imag5.png' %}" lastImg alt="">
-                        </div>
-                        <div class='arrow-beige-btn-container'>
-                            <img class='right-arrow-beige' src="{% static 'hotel/icons/Right_beige.svg' %}" alt="">
-                        </div>
-                    </div>
+        </div>
+        <div class='image-container'>
+            <div class='slides'>
+                <div class='slides-img-container'>
+                    <img src="{% static 'hotel/images/portada1_2.jpg' %}"  alt="">
                 </div>
+
+                <div class='slides-img-container'>
+                    <img src="{% static 'hotel/images/portada2.jpg' %}" alt="">
+                </div>
+
+                <div class='slides-img-container'>
+                    <img src="{% static 'hotel/images/portada3_2.jpg' %}" alt="">
+                </div>
+
+                <div class='slides-img-container'>
+                    <img src="{% static 'hotel/images/portada4_2.jpg' %}" alt="">
+                </div>
+                
+                
+                <div class='slides-img-container'>
+                    <img src="{% static 'hotel/images/portada5_2.jpg' %}" alt="">
+                </div>
+                
             </div>
             
-        </section>
+        </div>  
+    </section>
+
+    <section id='about-container'> 
+        <div class='about-container__div'>
+            <h1 class='about-container__div-h1'>ABOUT MERVEILLE</h1>
+            <div class='about-container-text-wrapper'>
+                <div class='about-container-text'>
+                    
+                    <p>Merveille is a  modern and elegant
+                        hotel located near the Juares Theater
+                        and the Barquisimeto Museum.</p>
+                        
+                        <p>The bright and functional rooms have all the
+                        comforts. There are room services, meeting rooms and
+                        diners.</p>
+
+                        <p>The hotel has a beautiful outdoor swimming pool and 
+                        a casual restaurant bar with a gorgeous view of the
+                        hotel.
+                    </p>
+                </div>
+                
+                
+                <div class='about-slider'>
+                    <div class='about-icons'>
+                        <ul class='about-list'>
+                            <div class='about-icon-container'>
+                                <img src="{% static 'hotel/icons/Wifi.svg'%}" alt="">
+                                <li>Free wifi in the whole building</li>
+
+                            </div>
+                            <div class='about-icon-container'>
+                                <img src="{% static 'hotel/icons/Horario.svg'%}" alt="">
+                                <li>Schedule: 24 hrs assisting you</li>
+
+
+                            </div>
+                            <div class='about-icon-container'>
+                                <img src="{% static 'hotel/icons/Estacionamiento.svg'%}" alt="">
+                                <li>The hotel offers free parking</li>
+
+                            </div>
+                        </ul>
+
+                    </div>
+                </div>
+                    
+                <div class='about-slide'>
+                    <div class='arrow-beige-btn-container'>
+                        <img class='left-arrow-beige'  src="{% static 'hotel/icons/Left_beige.svg' %}" alt="">
+                    </div>
+                    <div class='about-slide-img-container'>
+                        <img src="{% static 'hotel/images/imagesAbout/imag1.png' %}" class='active' firstImg alt="">
+
+                        <img src="{% static 'hotel/images/imagesAbout/imag2.png' %}" alt="">
+
+                        <img src="{% static 'hotel/images/imagesAbout/imag3.png' %}" alt="">
+
+                        <img src="{% static 'hotel/images/imagesAbout/imag4.png' %}" alt="">
+                        
+                        <img src="{% static 'hotel/images/imagesAbout/imag5.png' %}" lastImg alt="">
+                    </div>
+                    <div class='arrow-beige-btn-container'>
+                        <img class='right-arrow-beige' src="{% static 'hotel/icons/Right_beige.svg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         
-    </div>
+    </section>
+        
     <div>
         <section id='services-container'>
             <div class='services-container__div'>
